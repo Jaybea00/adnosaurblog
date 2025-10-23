@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dinosaur head -->
+  <g>
+    <!-- Main head shape -->
+    <path d="M30 60 Q20 40 30 25 Q40 15 55 20 Q65 10 75 15 Q85 20 90 35 L95 50 Q95 60 90 65 Q85 70 75 68 Q70 85 55 90 Q40 85 35 75 Q30 70 30 60 Z" fill="#8fff87"/>
+    
+    <!-- Horn/spike on top -->
+    <path d="M55 20 L58 8 L62 20 Z" fill="#8fff87"/>
+    
+    <!-- Eye -->
+    <circle cx="50" cy="45" r="6" fill="white"/>
+    <circle cx="50" cy="45" r="3" fill="#303030"/>
+    
+    <!-- Mouth/smile -->
+    <path d="M40 55 Q50 62 60 55" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+    
+    <!-- Teeth (zigzag) -->
+    <path d="M42 58 L44 63 L46 58 L48 63 L50 58 L52 63 L54 58 L56 63 L58 58" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+    
+    <!-- Nostril -->
+    <circle cx="65" cy="40" r="2" fill="#303030"/>
+    
+    <!-- Body suggestion (neck) -->
+    <path d="M30 75 Q25 85 20 95 L35 95 Q33 85 35 75 Z" fill="#8fff87"/>
+    <path d="M35 85 Q30 90 25 95" stroke="#6BDD00" stroke-width="2"/>
+  </g>
+</svg>
