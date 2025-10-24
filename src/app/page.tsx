@@ -526,238 +526,547 @@ export default function Home() {
             <span className="text-primary">fair price</span>
           </h2>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-            Choose the plan that works best for you. All plans include our core
-            features.
+            Product research tools lose their edge when used by everybody.
+            Therefore, we will only allow 500 dropshippers to work with us. Lock
+            in your seat now with up to 80% discount!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Starter Plan */}
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8">
-              <div className="text-sm font-semibold text-gray-600 mb-2">
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <div className="text-lg font-bold text-gray-900 mb-4">
                 Starter plan
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-1">$10</div>
-              <div className="text-sm text-gray-500 mb-6">per month</div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">
-                    10 product searches
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-gray-900">$10</span>
+                <span className="text-gray-400 line-through ml-2">
+                  from $49,99
+                </span>
+              </div>
+              <a
+                href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9CwEsOdJ7C9r&amount=10"
+                className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors mb-6 text-center"
+              >
+                Get started
+              </a>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-700 flex items-center gap-1">
+                    2000 credits
+                    <span className="group relative inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-400 text-xs cursor-help">
+                      i
+                      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-left z-10">
+                        <div className="font-semibold mb-2">
+                          Credit usage information:
+                        </div>
+                        <ul className="space-y-1">
+                          <li>
+                            - 10 credits will be deducted
+                            <br />
+                            each time new entries are
+                            <br />
+                            loaded on the store or
+                            <br />
+                            product page.
+                          </li>
+                          <li>
+                            - 10 credits will be deducted
+                            <br />
+                            each time a product or store
+                            <br />
+                            detail page is opened.
+                          </li>
+                          <li>
+                            - 1 credit will be deducted for
+                            <br />
+                            each ad loaded on the ads
+                            <br />
+                            page.
+                          </li>
+                        </ul>
+                        <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-gray-900"></span>
+                      </span>
+                    </span>
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">Basic analytics</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Pre-set filters to find winners
+                  </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">Email support</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">Magic search</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    WhatsApp customer service
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Access to 5M+ fashion dropshipping ads
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Access to 550K+ fashion dropshipping products
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Access to 115K+ fashion dropshipping stores
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Advanced filters on ads, products, and stores
+                  </span>
                 </li>
               </ul>
-              <button className="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-bold py-3 px-6 rounded-full transition-colors">
-                Choose plan
-              </button>
             </div>
 
-            {/* Growth Plan (Popular) */}
-            <div className="bg-primary/5 border-2 border-primary rounded-2xl p-8 relative">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-gray-900 text-xs font-bold px-4 py-1 rounded-full">
-                MOST POPULAR
+            {/* Basic Plan (Most Popular) */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="text-lg font-bold text-gray-900">
+                  Basic plan
+                </div>
+                <div className="bg-gray-100 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
+                  Most Popular
+                </div>
               </div>
-              <div className="text-sm font-semibold text-gray-600 mb-2">
-                Growth plan
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-gray-900">$30</span>
+                <span className="text-gray-400 line-through ml-2">
+                  from $74,99
+                </span>
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-1">$30</div>
-              <div className="text-sm text-gray-500 mb-6">per month</div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+              <a
+                href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9EWjEjmIhmeO&amount=30"
+                className="block w-full bg-primary hover:bg-primary/90 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors mb-6 text-center"
+              >
+                Get started
+              </a>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
                   <span className="text-sm text-gray-700">
-                    100 product searches
+                    Everything in the starter plan
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">
-                    Advanced analytics
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-700 flex items-center gap-1">
+                    10000 credits
+                    <span className="group relative inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-400 text-xs cursor-help">
+                      i
+                      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-left z-10">
+                        <div className="font-semibold mb-2">
+                          Credit usage information:
+                        </div>
+                        <ul className="space-y-1">
+                          <li>
+                            - 10 credits will be deducted
+                            <br />
+                            each time new entries are
+                            <br />
+                            loaded on the store or
+                            <br />
+                            product page.
+                          </li>
+                          <li>
+                            - 10 credits will be deducted
+                            <br />
+                            each time a product or store
+                            <br />
+                            detail page is opened.
+                          </li>
+                          <li>
+                            - 1 credit will be deducted for
+                            <br />
+                            each ad loaded on the ads
+                            <br />
+                            page.
+                          </li>
+                        </ul>
+                        <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-gray-900"></span>
+                      </span>
+                    </span>
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">
-                    Priority support
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    One-click import competitors' product pages
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">
-                    Export to Shopify
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    12 hand-picked bestsellers
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Connect up to three stores
                   </span>
                 </li>
               </ul>
-              <button className="w-full bg-primary hover:bg-primary/90 text-gray-900 font-bold py-3 px-6 rounded-full transition-colors">
-                Get started
-              </button>
             </div>
 
             {/* Pro Plan */}
-            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8">
-              <div className="text-sm font-semibold text-gray-600 mb-2">
-                Pro plan
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="text-lg font-bold text-gray-900">Pro Plan</div>
+                <div className="bg-gray-100 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
+                  Beta
+                </div>
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-1">$40</div>
-              <div className="text-sm text-gray-500 mb-6">per month</div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-gray-900">$40</span>
+                <span className="text-gray-400 line-through ml-2">
+                  from $99,99
+                </span>
+              </div>
+              <a
+                href="https://wa.me/31622253931?text=Hey%20Sam%2C%20I%20would%20love%20to%20be%20a%20beta%20tester%20for%20Adnosaur.%20Are%20there%20any%20spots%20left%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors mb-6 text-center"
+              >
+                Send us a message
+              </a>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
                   <span className="text-sm text-gray-700">
-                    Unlimited searches
+                    Everything in the Basic plan
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">
-                    All features included
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Unlimited credits & stores connected
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">24/7 support</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">200 AI credits</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">
-                    Custom integrations
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    AI-generated product pages (1 credit per product page)
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <svg
-                    className="w-5 h-5 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm text-gray-700">API access</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    AI-generated branded product images (5 credit per image)
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    AI-generated branded product videos (10 credits per video)
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    Auto-push products
+                  </span>
                 </li>
               </ul>
-              <button className="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-bold py-3 px-6 rounded-full transition-colors">
-                Choose plan
-              </button>
             </div>
           </div>
         </div>
@@ -765,86 +1074,132 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             Frequently asked questions
           </h2>
 
-          <div className="space-y-6">
-            <details className="bg-white rounded-lg p-6 cursor-pointer">
-              <summary className="font-semibold text-gray-900 text-lg">
-                How does Adnosaur save me time and money?
+          <div className="space-y-4 border border-white rounded-2xl p-6">
+            <details className="border-b border-gray-200 pb-4 group">
+              <summary className="flex items-start gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+                  +
+                </span>
+                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                  ×
+                </span>
+                <span className="flex-1 font-semibold text-gray-900 text-base">
+                  How does Adnosaur save me time and money?
+                </span>
               </summary>
-              <p className="mt-4 text-gray-600">
-                Adnosaur automates the product research process, allowing you to
-                find winning products in seconds rather than hours. This means
-                you can focus on growing your business instead of spending time
-                on manual research.
-              </p>
+              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+                Adnosaur is essentially the Facebook ads library on steroids.
+                You can filter all ads, see all competitor stores for each
+                product, and easily list the products you want to sell in your
+                store.
+              </div>
             </details>
 
-            <details className="bg-white rounded-lg p-6 cursor-pointer">
-              <summary className="font-semibold text-gray-900 text-lg">
-                What are the best product discovery tools?
+            <details className="border-b border-gray-200 pb-4 group">
+              <summary className="flex items-start gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+                  +
+                </span>
+                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                  ×
+                </span>
+                <span className="flex-1 font-semibold text-gray-900 text-base">
+                  How can I find the best products to sell?
+                </span>
               </summary>
-              <p className="mt-4 text-gray-600">
-                Adnosaur provides comprehensive tools including Facebook ads
-                analysis, TikTok influencer tracking, and unsaturated product
-                discovery specifically for fashion products.
-              </p>
+              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+                <p className="mb-2">
+                  Watch this video to get started:
+                  https://www.youtube.com/watch?v=2JxBEhrkVWQ
+                </p>
+                <p>
+                  We recommend that you develop your own filters and strategy
+                  over time.
+                </p>
+              </div>
             </details>
 
-            <details className="bg-white rounded-lg p-6 cursor-pointer">
-              <summary className="font-semibold text-gray-900 text-lg">
-                Can I use Adnosaur for other niches or is it just fashion?
+            <details className="border-b border-gray-200 pb-4 group">
+              <summary className="flex items-start gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+                  +
+                </span>
+                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                  ×
+                </span>
+                <span className="flex-1 font-semibold text-gray-900 text-base">
+                  How can I estimate the saturation of a product?
+                </span>
               </summary>
-              <p className="mt-4 text-gray-600">
-                While Adnosaur is optimized for fashion products, many of its
-                features can be valuable for other product categories as well.
-              </p>
+              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+                Use our saturation analysis tools to see how many competitors
+                are selling similar products and evaluate market opportunities.
+              </div>
             </details>
 
-            <details className="bg-white rounded-lg p-6 cursor-pointer">
-              <summary className="font-semibold text-gray-900 text-lg">
-                Why does Adnosaur focus on fashion products?
+            <details className="border-b border-gray-200 pb-4 group">
+              <summary className="flex items-start gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+                  +
+                </span>
+                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                  ×
+                </span>
+                <span className="flex-1 font-semibold text-gray-900 text-base">
+                  Why does Adnosaur focus on fashion only?
+                </span>
               </summary>
-              <p className="mt-4 text-gray-600">
+              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
                 Fashion is one of the largest and most dynamic eCommerce
                 categories. By specializing in fashion, we can provide more
                 accurate data and better insights specific to this market.
-              </p>
+              </div>
             </details>
 
-            <details className="bg-white rounded-lg p-6 cursor-pointer">
-              <summary className="font-semibold text-gray-900 text-lg">
-                What is more about Adnosaur and pricing?
+            <details className="border-b border-gray-200 pb-4 group">
+              <summary className="flex items-start gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+                  +
+                </span>
+                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                  ×
+                </span>
+                <span className="flex-1 font-semibold text-gray-900 text-base">
+                  What is unique about Adnosaur?
+                </span>
               </summary>
-              <p className="mt-4 text-gray-600">
-                Adnosaur offers flexible pricing plans to suit businesses of all
-                sizes. We provide transparent pricing with no hidden fees, and
-                you can cancel anytime.
-              </p>
+              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+                Adnosaur combines powerful ad tracking, competitor analysis, and
+                product research tools in one platform, specifically optimized
+                for fashion products.
+              </div>
+            </details>
+
+            <details className="pb-4 group">
+              <summary className="flex items-start gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+                  +
+                </span>
+                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                  ×
+                </span>
+                <span className="flex-1 font-semibold text-gray-900 text-base">
+                  Why won't we add Pinterest and TikTok?
+                </span>
+              </summary>
+              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+                We focus on Facebook ads because they provide the most
+                comprehensive data and are the primary advertising platform for
+                fashion products. This allows us to deliver higher quality
+                insights.
+              </div>
             </details>
           </div>
-        </div>
-      </section>
-
-      {/* Blog CTA Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Want to learn more about product research?
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Check out our blog for tips, strategies, and insights on finding
-            winning products.
-          </p>
-          <Link
-            href="/blog"
-            className="inline-block border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-bold py-3 px-8 rounded-full transition-colors"
-          >
-            Visit our blog
-          </Link>
         </div>
       </section>
     </div>
