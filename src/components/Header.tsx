@@ -40,7 +40,7 @@ export default function Header() {
               FAQ'S
             </Link>
             <Link
-              href="https://www.adnosaur.com/contact"
+              href="/contact"
               className="text-sm text-white hover:text-primary transition-colors font-bold"
             >
               CONTACT
@@ -121,7 +121,7 @@ export default function Header() {
                 FAQ'S
               </Link>
               <Link
-                href="https://www.adnosaur.com/contact"
+                href="/contact"
                 className="px-6 py-3 text-sm text-white hover:bg-gray-700 hover:text-primary transition-colors font-bold"
                 onClick={() => setMobileMenuOpen(false)}
               >
