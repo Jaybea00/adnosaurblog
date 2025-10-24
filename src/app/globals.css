@@ -10,6 +10,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -153,5 +157,51 @@
     color: #6b7280;
     margin-top: 0.75rem;
     font-style: italic;
+  }
+
+  /* FAQ smooth slide animation */
+  details {
+    overflow: hidden;
+  }
+
+  details summary {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details > div {
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  details[open] > div {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Mobile table smooth scrolling */
+  @media (max-width: 768px) {
+    .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    .overflow-x-auto::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .overflow-x-auto::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
   }
 }

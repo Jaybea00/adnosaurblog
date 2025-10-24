@@ -83,7 +83,7 @@ export default function Home() {
       <section className="relative text-white py-12  overflow-visible flex items-center justify-center min-h-[90vh]">
         <div className="max-w-[1200px] w-full mx-auto px-4">
           {/* Contained card with rounded corners */}
-          <div className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12 pb-32 md:pb-90 relative overflow-hidden">
+          <div className="bg-transparent md:bg-[#1a1a1a] rounded-3xl p-8 md:p-12 pb-32 md:pb-90 relative overflow-hidden">
             <div className="text-center relative z-10">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                 Find and list unsaturated{" "}
@@ -328,186 +328,186 @@ export default function Home() {
       </section>
 
       {/* Features Comparison Table */}
-      <section className="py-20 px-4 bg-transparent overflow-x-hidden">
+      <section className="py-12 md:py-20 px-2 md:px-4 bg-transparent overflow-x-hidden">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-4xl text-center font-bold text-gray-900 mb-12 ">
+          <h2 className="text-xl md:text-3xl lg:text-4xl text-center font-bold text-gray-900 mb-8 md:mb-12 px-4">
             Features that <span className="text-gray-400">set us apart</span>
           </h2>
 
-          <div className="bg-white rounded-2xl overflow-visible">
-            <div>
-              <table className="w-full">
+          <div className="bg-white rounded-xl md:rounded-2xl overflow-visible">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[600px]">
                 <thead>
                   <tr className="">
-                    <th className="text-left py-5 px-4 font-medium text-xs text-gray-500 bg-white rounded-l-full"></th>
-                    <th className="text-center py-5 px-4 font-semibold text-xs text-gray-900 relative  border-t-4 border-[#8fff87] bg-[#F6FFF4] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-primary before:rounded-t-full">
+                    <th className="text-left py-3 md:py-5 px-2 md:px-4 font-medium text-[10px] md:text-xs text-gray-500 bg-white rounded-l-full"></th>
+                    <th className="text-center py-3 md:py-5 px-2 md:px-4 font-semibold text-xs md:text-sm text-gray-900 relative border-t-4 border-[#8fff87] bg-[#F6FFF4] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-primary before:rounded-t-full">
                       Adnosaur
                     </th>
-                    <th className="text-center py-5 px-4 font-medium text-xs text-gray-500  border-gray-200 bg-white">
+                    <th className="text-center py-3 md:py-5 px-2 md:px-4 font-medium text-[10px] md:text-sm text-black border-gray-200 bg-white">
                       Competitor 1
                     </th>
-                    <th className="text-center py-5 px-4 font-medium text-xs text-gray-500  border-gray-200 bg-white rounded-r-full">
+                    <th className="text-center py-3 md:py-5 px-2 md:px-4 font-medium text-[10px] md:text-xs text-black border-gray-200 bg-white rounded-r-full">
                       Competitor 2
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {/* Spacer row to create a gap between header and first row */}
-                  <tr aria-hidden className="h-3 bg-[#f9f9f7]"><td colSpan={4} className="p-0"></td></tr>
+                  <tr aria-hidden className="h-2 md:h-3 bg-[#f9f9f7]"><td colSpan={4} className="p-0"></td></tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4 text-xs text-gray-900">Facebook ads</td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">Facebook ads</td>
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <CircleCheck />
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4 text-xs text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
                       Tiktok/Pinterest ads
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <CircleCheck />
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4 text-xs text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
                       Import/copy competitor product listings
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs"><CircleCheck /></span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4 text-xs text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
                       Product focused approach
-                       <div className="text-[10px] text-gray-400 mt-0.5">See all competitors for each product</div>
+                       <div className="text-[10px] md:text-[12px] text-gray-400 font-light mt-0.5">See all competitors for each product</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <CircleCheck color="orange" />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">  <CircleCheck color="orange" /></span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">
-                      <div className="text-xs text-gray-900">Focus</div>
-                      <div className="text-[10px] text-gray-400 mt-0.5">Only focuses on one specific niche and platform.</div>
+                    <td className="py-2 md:py-3 px-2 md:px-4">
+                      <div className="text-xs md:text-sm font-semibold text-gray-900">Focus</div>
+                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">Only focuses on one specific niche and platform.</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">
-                      <div className="text-xs text-gray-900">Fair pricing</div>
-                      <div className="text-[10px] text-gray-400 mt-0.5">Don’t work with coaches who take 50% affiliate fee.</div>
+                    <td className="py-2 md:py-3 px-2 md:px-4">
+                      <div className="text-xs md:text-sm font-semibold text-gray-900">Fair pricing</div>
+                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">Don’t work with coaches who take 50% affiliate fee.</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                        <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">
-                      <div className="text-xs text-gray-900">Protection against saturation</div>
-                      <div className="text-[10px] text-gray-400 mt-0.5">Only work with a limited number of dropshippers.</div>
+                    <td className="py-2 md:py-3 px-2 md:px-4">
+                      <div className="text-xs md:text-sm font-semibold text-gray-900">Protection against saturation</div>
+                      <div className="text-[10px] md:text-[12px] text-gray-400  mt-0.5">Only work with a limited number of dropshippers.</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                        <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                         <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">
+                    <td className="py-2 md:py-3 px-2 md:px-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-900">AI product listing</span>
+                        <span className="text-xs md:text-sm font-semibold text-gray-900">AI product listing</span>
                         <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">BETA</span>
                       </div>
-                      <div className="text-[10px] text-gray-400 mt-0.5">Replace your product lister with better quality AI listings.</div>
+                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">Replace your product lister with better quality AI listings.</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                        <CircleCheck color="orange" />
                       
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                      <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">
+                    <td className="py-2 md:py-3 px-2 md:px-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-900">AI product images</span>
+                        <span className="text-xs md:text-sm font-semibold text-gray-900">AI product images</span>
                         <InfoBadge src="/firsttooltipImg.avif" title="Preview" />
                         <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">BETA</span>
                       </div>
-                      <div className="text-[10px] text-gray-400 mt-0.5">Brand your store with AI fashion models.</div>
+                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">Brand your store with AI fashion models.</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <CircleCheck color="orange" />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4">
+                    <td className="py-2 md:py-3 px-2 md:px-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-900">AI product videos</span>
+                        <span className="text-xs md:text-sm font-semibold text-gray-900">AI product videos</span>
                         <InfoBadge videoSrc="/tooltipvideo.mp4" title="Video Preview" />
                         <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">BETA</span>
                       </div>
-                      <div className="text-[10px] text-gray-400 mt-0.5">Brand your store with AI fashion videos.</div>
+                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">Brand your store with AI fashion videos.</div>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
                       <CircleCheck />
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
                       <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
@@ -519,21 +519,21 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white">
+      <section id="pricing" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4 text-center">
             Lock in your seat for a{" "}
-            <span className="text-primary">fair price</span>
+            <span className="text-gray-400">fair price</span>
           </h2>
-          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-sm md:text-base text-gray-600 text-center max-w-2xl mx-auto mb-8 md:mb-12 px-2">
             Product research tools lose their edge when used by everybody.
             Therefore, we will only allow 500 dropshippers to work with us. Lock
             in your seat now with up to 80% discount!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Starter Plan */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
               <div className="text-lg font-bold text-gray-900 mb-4">
                 Starter plan
               </div>
@@ -808,7 +808,7 @@ export default function Home() {
                     10000 credits
                     <span className="group relative inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-400 text-xs cursor-help">
                       i
-                      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-64 text-left z-10">
+                      <span className="absolute bottom-full left-1/2 -translate-x-[-20%] -translate-y-[-80%] mb-2 px-3 py-2 bg-gray-900 text-white text-[10px] rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-40 text-left z-10">
                         <div className="font-semibold mb-2">
                           Credit usage information:
                         </div>
@@ -1073,26 +1073,26 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section id="faq" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 md:mb-12 text-center px-2">
             Frequently asked questions
           </h2>
 
-          <div className="space-y-4 border border-white rounded-2xl p-6">
-            <details className="border-b border-gray-200 pb-4 group">
-              <summary className="flex items-start gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+          <div className="space-y-3 md:space-y-4 bg-white border-white rounded-xl md:rounded-2xl p-4 md:p-6">
+            <details className="border-b border-gray-200 pb-3 md:pb-4 group">
+              <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
                   +
                 </span>
-                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
                   How does Adnosaur save me time and money?
                 </span>
               </summary>
-              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
                 Adnosaur is essentially the Facebook ads library on steroids.
                 You can filter all ads, see all competitor stores for each
                 product, and easily list the products you want to sell in your
@@ -1100,19 +1100,19 @@ export default function Home() {
               </div>
             </details>
 
-            <details className="border-b border-gray-200 pb-4 group">
-              <summary className="flex items-start gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+            <details className="border-b border-gray-200 pb-3 md:pb-4 group">
+              <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
                   +
                 </span>
-                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
                   How can I find the best products to sell?
                 </span>
               </summary>
-              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
                 <p className="mb-2">
                   Watch this video to get started:
                   https://www.youtube.com/watch?v=2JxBEhrkVWQ
@@ -1124,56 +1124,56 @@ export default function Home() {
               </div>
             </details>
 
-            <details className="border-b border-gray-200 pb-4 group">
-              <summary className="flex items-start gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+            <details className="border-b border-gray-200 pb-3 md:pb-4 group">
+              <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
                   +
                 </span>
-                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
                   How can I estimate the saturation of a product?
                 </span>
               </summary>
-              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
                 Use our saturation analysis tools to see how many competitors
                 are selling similar products and evaluate market opportunities.
               </div>
             </details>
 
-            <details className="border-b border-gray-200 pb-4 group">
-              <summary className="flex items-start gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+            <details className="border-b border-gray-200 pb-3 md:pb-4 group">
+              <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
                   +
                 </span>
-                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
                   Why does Adnosaur focus on fashion only?
                 </span>
               </summary>
-              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
                 Fashion is one of the largest and most dynamic eCommerce
                 categories. By specializing in fashion, we can provide more
                 accurate data and better insights specific to this market.
               </div>
             </details>
 
-            <details className="border-b border-gray-200 pb-4 group">
-              <summary className="flex items-start gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+            <details className="border-b border-gray-200 pb-3 md:pb-4 group">
+              <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
                   +
                 </span>
-                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
                   What is unique about Adnosaur?
                 </span>
               </summary>
-              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
                 Adnosaur combines powerful ad tracking, competitor analysis, and
                 product research tools in one platform, specifically optimized
                 for fashion products.
@@ -1181,18 +1181,18 @@ export default function Home() {
             </details>
 
             <details className="pb-4 group">
-              <summary className="flex items-start gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-3xl flex-shrink-0 group-open:hidden leading-none">
+              <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
                   +
                 </span>
-                <span className="text-gray-400 text-3xl flex-shrink-0 hidden group-open:inline leading-none">
+                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
                   Why won't we add Pinterest and TikTok?
                 </span>
               </summary>
-              <div className="mt-3 ml-12 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
                 We focus on Facebook ads because they provide the most
                 comprehensive data and are the primary advertising platform for
                 fashion products. This allows us to deliver higher quality

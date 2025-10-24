@@ -28,13 +28,13 @@ export default function Header() {
               BLOG
             </Link>
             <Link
-              href="https://www.adnosaur.com/#plans"
+              href="/#pricing"
               className="text-sm text-white hover:text-primary transition-colors font-bold"
             >
               PRICING
             </Link>
             <Link
-              href="https://www.adnosaur.com/#faq"
+              href="/#faq"
               className="text-sm text-white hover:text-primary transition-colors font-bold"
             >
               FAQ'S
@@ -107,14 +107,14 @@ export default function Header() {
                 BLOG
               </Link>
               <Link
-                href="https://www.adnosaur.com/#plans"
+                href="/#pricing"
                 className="px-6 py-3 text-sm text-white hover:bg-gray-700 hover:text-primary transition-colors font-bold"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 PRICING
               </Link>
               <Link
-                href="https://www.adnosaur.com/#faq"
+                href="/#faq"
                 className="px-6 py-3 text-sm text-white hover:bg-gray-700 hover:text-primary transition-colors font-bold"
                 onClick={() => setMobileMenuOpen(false)}
               >

@@ -13,8 +13,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Blog - Find and list winning content",
-  description: "Your source for the latest insights and articles",
+  title: "Fashion dropshipping research - Find your next fashion winner today",
+  description: "Increase your winning product rate up to 31% — without wasting time and money testing saturated products",
+  icons: {
+    icon: "/footerLogo.png",
+  },
 };
 
 export default function RootLayout({
