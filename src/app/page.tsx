@@ -1,11 +1,85 @@
 import Link from "next/link";
 import AnimatedNotifications from "@/components/AnimatedNotifications";
 import StatsCounters from "@/components/StatsCounters";
+import ProductSearchCards from "@/components/ProductSearchCards";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import Image from "next/image";
+
+// Small helper for green/orange round badges with a white check
+const CircleCheck = ({ color = "green" }: { color?: "green" | "orange" }) => (
+  <div
+    className={`w-5 h-5 rounded-full mx-auto flex items-center justify-center ${
+      color === "orange" ? "bg-orange-400" : "bg-primary"
+    }`}
+  >
+    <svg
+      className="w-3 h-3 text-white"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </div>
+);
+
+// Image/Video tooltip badge (supports single image, video, or before/after pair)
+const InfoBadge = ({
+  src,
+  videoSrc,
+  beforeSrc,
+  afterSrc,
+  title = "More info",
+}: {
+  src?: string;
+  videoSrc?: string;
+  beforeSrc?: string;
+  afterSrc?: string;
+  title?: string;
+}) => (
+  <span className="relative inline-flex items-center group" aria-label="info" title={title}>
+    <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-700 text-[10px] font-bold leading-none bg-white">i</span>
+    <span
+      className="absolute left-1/2 z-50 mt-2 -translate-x-[-25%] -translate-y-15 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200"
+      role="tooltip"
+    >
+      {/* Video tooltip */}
+      {videoSrc ? (
+        <span className="relative block w-24 sm:w-28 h-48 bg-white rounded-xl shadow-xl border-2 border-black overflow-hidden">
+          <video src={videoSrc} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+        </span>
+      ) : src ? (
+        /* Single image tooltip */
+        <span className="relative block w-24 sm:w-28 h-56 bg-white rounded-xl shadow-xl border-2 border-black overflow-hidden">
+          <Image src={src} alt={title} fill className="object-cover" />
+        </span>
+      ) : (
+        <span className="block w-44 sm:w-56 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden">
+          <span className="relative block h-24 w-44 sm:w-56">
+            {beforeSrc && (
+              <Image src={beforeSrc} alt="Before" fill className="object-cover" />
+            )}
+            <span className="absolute top-1 right-1 text-[10px] bg-black/70 text-white px-1.5 rounded">Before</span>
+          </span>
+          <span className="relative block h-24 w-44 sm:w-56 border-t border-gray-200">
+            {afterSrc && (
+              <Image src={afterSrc} alt="After" fill className="object-cover" />
+            )}
+            <span className="absolute top-1 right-1 text-[10px] bg-black/70 text-white px-1.5 rounded">After</span>
+          </span>
+        </span>
+      )}
+    </span>
+  </span>
+);
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative text-white py-12  overflow-visible flex items-center justify-center min-h-[90vh]">
         <div className="max-w-[1200px] w-full mx-auto px-4">
           {/* Contained card with rounded corners */}
@@ -146,79 +220,37 @@ export default function Home() {
       />
 
       {/* Product Research Method Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-25 px-4 bg-transparent ">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-15">
             Your product research method
             <br />
-            is losing you <span className="text-primary">time and money.</span>
+            is losing you <span className="text-[#bfbfbd]">time and money.</span>
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mb-16">
-            Product research is crucial to your success as an eCommerce
-            entrepreneur, and yet, you're likely not using the right strategies.
+          <p className="text-gray-500 text-lg max-w-3xl mx-auto mb-8">
+           Don’t base your product research on only one successful ad or inaccurate Shopify revenue trackers. Use the following method to analyze every competitor for each product before running ads and increase your winning product rate to 31%*.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">📱</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Post-analysis Facebook ads
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Efficient way to find most popular Facebook ads. You see
-                competitive advertising in your niche and learn what is working
-                in real-time.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Amazon best seller
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Use Amazon's best-seller list to identify trending products.
-                However, this method doesn't distinguish between saturated and
-                competitive niches.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">🛍️</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Aliexpress hot products
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Browse AliExpress trending products. These products often have
-                high competition, making it difficult to stand out.
-              </p>
-            </div>
-          </div>
+              {/* Product Search Cards Section */}
+      <section className="px-4 bg-transparent">
+        <ProductSearchCards />
+      </section>
         </div>
       </section>
 
       {/* Video Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className=" px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 text-center leading-15">
             Watch how Adnosaur helps you find
             <br />
-            unsaturated <span className="text-primary">
-              fashion products
+            <span className="text-[#949494]">
+              unsaturated fashion products
             </span>{" "}
             in your country.
           </h2>
 
-          <div className="mt-12 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="mt-12 rounded-[2.5rem] overflow-hidden ">
             <div className="relative" style={{ paddingBottom: "56.25%" }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
@@ -230,144 +262,253 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-8">
-            <Link
-              href="https://trial.adnosaur.com/"
-              className="inline-block bg-primary hover:bg-primary/90 text-gray-900 font-bold py-4 px-8 rounded-full transition-colors"
-            >
-              Try the automatic fashion winners list
-            </Link>
-            <div className="mt-4 text-sm text-gray-600">
-              Try for free •{" "}
-              <span className="text-primary">No Login required</span>
+          <div className="text-center mt-12 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="https://trial.adnosaur.com/"
+                className="inline-block bg-primary hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors"
+              >
+                Find unsaturated fashion winners now
+              </Link>
+              <Link
+                href="https://trial.adnosaur.com/"
+                className="inline-block border-1 border-gray-300 hover:border-gray-500bg-transparent text-gray-700 font-medium py-4 px-8 rounded-2xl transition-colors"
+              >
+                Try for free <span className="text-gray-400">- No login required</span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
+
+
       {/* Competitors Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 text-center leading-16">
             Your smartest competitors are
             <br />
-            already using <span className="text-primary">Adnosaur!</span>
+            already using <span className="text-[#949494]">Adnosaur!</span>
           </h2>
 
-          <div className="mt-12 bg-gray-50 rounded-2xl p-8">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1">
-                <div className="h-64 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">
-                    Chart visualization placeholder
-                  </span>
-                </div>
-              </div>
-              <div className="flex-1">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
-                    <div>
-                      <p className="text-gray-700 leading-relaxed mb-4">
-                        "Since using Adnosaur, I've been able to identify
-                        winning products much faster. The data is accurate and
-                        the interface is super easy to use. I can't imagine
-                        going back to manual research!"
-                      </p>
-                      <div className="font-semibold text-gray-900">
-                        John Entrepreneur
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        eCommerce Store Owner
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* testimonial section */}
+          <TestimonialCarousel
+            testimonials={[
+              {
+                id: 1,
+                quote:
+                  "I have used Adnosaur for the past 7 months. Our winning rate went from 16% to 31% in the first two weeks of usage, which was crazy. Currently, we are at around 28%. The tool is great, but what is even better is the support from Sam and Tim. They are always ready to answer any questions and have even hopped on a call a few times to help me.",
+                name: "Anne",
+                title: "7 Figure Dropshipper",
+                avatar: "/Anne.avif",
+                chartImage: "/AnneSlide.avif",
+              },
+              {
+                id: 2,
+                quote:
+                  "The only tool I ever worked with that keeps improving and listens to its client base. Stumbled across the owners on Discord, had a quick conversation, tried it, and never looked back.",
+                name: "Aiden",
+                title: "7 Figure Dropshipper",
+                avatar: "/Aiden.avif",
+                chartImage: "/AidenSlide.avif",
+              },
+              {
+                id: 3,
+                quote:
+                  "Long-time user here. I recently got access to the small beta group testing out the AI-generated product page, product images, and product videos. The videos are still a little rough, but this is a real game-changer. I can now brand my full store without any photo shoot.",
+                name: "Brian",
+                title: "8 Figure Dropshipper",
+                avatar: "/Brian.avif",
+                chartImage: "/BrianSlide.avif",
+              },
+            ]}
+          />
         </div>
       </section>
 
       {/* Features Comparison Table */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-transparent overflow-x-hidden">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-2xl md:text-4xl text-center font-bold text-gray-900 mb-12 ">
             Features that <span className="text-gray-400">set us apart</span>
           </h2>
 
-          <div className="mt-12 bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="overflow-x-auto">
+          <div className="bg-white rounded-2xl overflow-visible">
+            <div>
               <table className="w-full">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="text-left p-6 font-bold text-gray-900">
-                      Feature
-                    </th>
-                    <th className="text-center p-6 font-bold text-primary">
+                <thead>
+                  <tr className="">
+                    <th className="text-left py-5 px-4 font-medium text-xs text-gray-500 bg-white rounded-l-full"></th>
+                    <th className="text-center py-5 px-4 font-semibold text-xs text-gray-900 relative  border-t-4 border-[#8fff87] bg-[#F6FFF4] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-1 before:bg-primary before:rounded-t-full">
                       Adnosaur
                     </th>
-                    <th className="text-center p-6 font-bold text-gray-600">
+                    <th className="text-center py-5 px-4 font-medium text-xs text-gray-500  border-gray-200 bg-white">
                       Competitor 1
                     </th>
-                    <th className="text-center p-6 font-bold text-gray-600">
+                    <th className="text-center py-5 px-4 font-medium text-xs text-gray-500  border-gray-200 bg-white rounded-r-full">
                       Competitor 2
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-100">
-                  <tr>
-                    <td className="p-6 text-gray-700">Facebook ads</td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
+                <tbody>
+                  {/* Spacer row to create a gap between header and first row */}
+                  <tr aria-hidden className="h-3 bg-[#f9f9f7]"><td colSpan={4} className="p-0"></td></tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 text-xs text-gray-900">Facebook ads</td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
                     </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <CircleCheck />
                     </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <CircleCheck />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 text-xs text-gray-900">
+                      Tiktok/Pinterest ads
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <CircleCheck />
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 text-xs text-gray-900">
+                      Import/copy competitor product listings
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs"><CircleCheck /></span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 text-xs text-gray-900">
+                      Product focused approach
+                       <div className="text-[10px] text-gray-400 mt-0.5">See all competitors for each product</div>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <CircleCheck color="orange" />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">  <CircleCheck color="orange" /></span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">
+                      <div className="text-xs text-gray-900">Focus</div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">Only focuses on one specific niche and platform.</div>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">
+                      <div className="text-xs text-gray-900">Fair pricing</div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">Don’t work with coaches who take 50% affiliate fee.</div>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                       <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">
+                      <div className="text-xs text-gray-900">Protection against saturation</div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">Only work with a limited number of dropshippers.</div>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                       <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                        <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-900">AI product listing</span>
+                        <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">BETA</span>
+                      </div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">Replace your product lister with better quality AI listings.</div>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                       <CircleCheck color="orange" />
+                      
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                     <span className="text-gray-400 text-xs">×</span>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-900">AI product images</span>
+                        <InfoBadge src="/firsttooltipImg.avif" title="Preview" />
+                        <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">BETA</span>
+                      </div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">Brand your store with AI fashion models.</div>
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <CircleCheck color="orange" />
+                    </td>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                   <tr>
-                    <td className="p-6 text-gray-700">
-                      Tiktok Influencers ads
+                    <td className="py-3 px-4">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-900">AI product videos</span>
+                        <InfoBadge videoSrc="/tooltipvideo.mp4" title="Video Preview" />
+                        <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">BETA</span>
+                      </div>
+                      <div className="text-[10px] text-gray-400 mt-0.5">Brand your store with AI fashion videos.</div>
                     </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
+                    <td className="py-3 px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
+                      <CircleCheck />
                     </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
                     </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-6 text-gray-700">
-                      Search unsaturated fashion products
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-yellow-400 rounded-full mx-auto"></div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-6 text-gray-700">
-                      Import products to your website
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="w-6 h-6 bg-primary rounded-full mx-auto"></div>
+                    <td className="py-3 px-4 text-center border-l border-gray-200">
+                      <span className="text-gray-400 text-xs">×</span>
                     </td>
                   </tr>
                 </tbody>
