@@ -60,33 +60,33 @@ export default function FloatingNotification() {
 
   return (
     <div
-      className={`fixed bottom-6 left-6 z-50 transition-all duration-500 ${
+      className={`fixed bottom-6 left-6 z-50 transition-all duration-500 scale-90 md:scale-100 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
-      <div className="bg-gray-100 rounded-2xl shadow-lg px-4 py-3 flex items-start gap-3 max-w-sm border border-gray-200">
+      <div className="bg-gray-100 rounded-2xl shadow-lg px-3 md:px-4 py-2 md:py-3 flex items-start gap-2 md:gap-3 max-w-[280px] md:max-w-sm border border-gray-200">
         {/* Icon */}
-        <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
+        <div className="flex-shrink-0 w-8 md:w-10 h-8 md:h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
           <Image
             src={currentNotification.icon}
             alt={currentNotification.title}
             width={28}
             height={28}
-            className="w-7 h-7"
+            className="w-5 md:w-7 h-5 md:h-7"
           />
         </div>
 
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2 mb-1">
-            <h4 className="font-bold text-gray-900 text-sm">
+            <h4 className="font-bold text-gray-900 text-xs md:text-sm">
               {currentNotification.title}
             </h4>
-            <span className="text-xs text-gray-500 whitespace-nowrap">
+            <span className="text-[10px] md:text-xs text-gray-500 whitespace-nowrap">
               {currentNotification.timeAgo}
             </span>
           </div>
-          <p className="text-sm text-gray-700 leading-snug">
+          <p className="text-xs md:text-sm text-gray-700 leading-snug">
             {currentNotification.message}
           </p>
         </div>

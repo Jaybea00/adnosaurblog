@@ -7,8 +7,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-6 left-0 right-0 z-50 px-4 font-polysans">
-      <nav className="max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full shadow-lg">
+    <header className="fixed top-6 left-0 right-0 z-50 px-4 font-polysans-media ">
+      <nav className="max-w-[330px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full shadow-lg">
         <div className="flex justify-between items-center h-14 pl-6 pr-3">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -66,39 +66,42 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-primary p-2"
+            className="md:hidden text-white hover:text-primary p-2 relative w-10 h-10 flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            <div className="w-6 h-5 relative flex flex-col justify-between">
+              {/* Top line */}
+              <span
+                className={`w-full h-0.5 bg-current rounded-full transition-all duration-300 origin-center ${
+                  mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              />
+              {/* Middle line */}
+              <span
+                className={`w-full h-0.5 bg-current rounded-full transition-all duration-300 ${
+                  mobileMenuOpen ? "opacity-0 scale-0" : ""
+                }`}
+              />
+              {/* Bottom line */}
+              <span
+                className={`w-full h-0.5 bg-current rounded-full transition-all duration-300 origin-center ${
+                  mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
+              />
+            </div>
           </button>
         </div>
 
         {/* Mobile Menu Dropdown */}
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-navbar border border-gray-700 rounded-2xl shadow-xl overflow-hidden">
-            <div className="flex flex-col py-4">
+        <div
+          className={`md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-navbar border border-gray-700 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 origin-top ${
+            mobileMenuOpen
+              ? "opacity-100 scale-y-100 translate-y-0"
+              : "opacity-0 scale-y-0 -translate-y-4 pointer-events-none"
+          }`}
+        >
+          <div className="flex flex-col py-4">
               <Link
                 href="/blog"
                 className="px-6 py-3 text-sm text-white hover:bg-gray-700 hover:text-primary transition-colors font-bold"
@@ -145,7 +148,6 @@ export default function Header() {
               </Link>
             </div>
           </div>
-        )}
       </nav>
     </header>
   );

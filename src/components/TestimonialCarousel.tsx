@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 interface Testimonial {
@@ -21,6 +21,24 @@ export default function TestimonialCarousel({
 }: TestimonialCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
+  const [containerHeight, setContainerHeight] = useState<number | undefined>(
+    undefined
+  );
+  const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+  // Adjust the container height to the current slide to avoid large blank spaces
+  useEffect(() => {
+    const updateHeight = () => {
+      const el = slideRefs.current[currentIndex];
+      if (el) {
+        setContainerHeight(el.offsetHeight);
+      }
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [currentIndex]);
 
   const handlePrevious = () => {
     setDirection("left");
@@ -37,9 +55,12 @@ export default function TestimonialCarousel({
   };
 
   return (
-    <div className="mt-12 relative max-w-3xl mx-auto">
+  <div className="mt-12 relative max-w-[320px] md:max-w-3xl mx-auto">
       <div className="bg-white rounded-3xl p-4 shadow-sm overflow-hidden">
-        <div className="relative overflow-hidden">
+        <div
+          className="relative overflow-hidden transition-[height] duration-300"
+          style={{ height: containerHeight }}
+        >
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -47,6 +68,9 @@ export default function TestimonialCarousel({
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
+                ref={(el) => {
+                  slideRefs.current[index] = el;
+                }}
                 className="min-w-full flex flex-col md:flex-row items-center gap-5"
               >
                 {/* Chart/Image Section */}

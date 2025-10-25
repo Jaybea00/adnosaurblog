@@ -29,7 +29,15 @@ const notifications = [
   },
 ];
 
-export default function AnimatedNotifications() {
+type AnimatedNotificationsProps = {
+  side?: "left" | "right"; // which side to anchor notifications
+  className?: string; // optional extra classes for container (e.g., scale-90 on mobile)
+};
+
+export default function AnimatedNotifications({
+  side = "right",
+  className = "",
+}: AnimatedNotificationsProps) {
   const [visibleNotifications, setVisibleNotifications] = useState<number[]>(
     []
   );
@@ -50,8 +58,12 @@ export default function AnimatedNotifications() {
     return () => clearInterval(interval);
   }, []);
 
+  const isLeft = side === "left";
+
   return (
-    <div className="absolute top-4 right-4 space-y-2 z-10">
+    <div
+      className={`absolute top-4 ${isLeft ? "left-4" : "right-4"} space-y-2 z-10 ${className}`}
+    >
       {notifications.map((notification, index) => (
         <div
           key={notification.id}
@@ -60,7 +72,7 @@ export default function AnimatedNotifications() {
             ${
               visibleNotifications.includes(index)
                 ? "translate-x-0 opacity-100"
-                : "translate-x-full opacity-0"
+                : `${isLeft ? "-translate-x-full" : "translate-x-full"} opacity-0`
             }
           `}
         >

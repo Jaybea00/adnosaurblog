@@ -83,6 +83,11 @@
     font-family: "PolySans Median", -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
   }
+  /* Explicit utility using the same family name requested */
+  .font-polysans-media {
+    font-family: "PolySans Median", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
   
   .font-roboto {
     font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

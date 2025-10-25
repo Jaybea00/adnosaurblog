@@ -80,22 +80,20 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <section className="relative text-white py-12  overflow-visible flex items-center justify-center min-h-[90vh]">
+  <section className="relative py-10 md:py-12 md:text-white overflow-visible flex items-center justify-center min-h-[90vh]">
         <div className="max-w-[1200px] w-full mx-auto px-4">
           {/* Contained card with rounded corners */}
-          <div className="bg-transparent md:bg-[#1a1a1a] rounded-3xl p-8 md:p-12 pb-32 md:pb-90 relative overflow-hidden">
+          <div className="bg-transparent md:bg-[#1a1a1a] rounded-3xl p-2 md:p-12 pb-8 md:pb-90 relative overflow-hidden md:shadow-none">
             <div className="text-center relative z-10">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-[2rem] md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-gray-900 md:text-white w-full">
                 Find and list unsaturated{" "}
                 <span className="text-primary">
-                  winning
-                  <br />
-                  fashion products
-                </span>{" "}
+                  winning fashion products
+                </span>{" "}<br className="md:hidden" />
                 in seconds.
               </h1>
 
-              <p className="text-base md:text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+              <p className="text-base md:text-lg text-gray-600 md:text-gray-400 mb-8 max-w-4xl mx-auto">
                 Increase your winning product rate up to 31%* — without wasting
                 time and money testing saturated products.
               </p>
@@ -113,7 +111,7 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-white">
+                  <p className="text-gray-900 md:text-white">
                     <span className="font-semibold">
                       Copy product listings:
                     </span>{" "}
@@ -132,7 +130,7 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-white">
+                  <p className="text-gray-900 md:text-white">
                     <span className="font-semibold">Hand-picked winners:</span>{" "}
                     Get products matched directly to your niche and country.
                   </p>
@@ -149,27 +147,27 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-white">
+                  <p className="text-gray-900 md:text-white">
                     <span className="font-semibold">Limited to 500 users:</span>{" "}
                     Keeping products unsaturated and profits high.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-0 md:mb-10">
                 <Link
                   href="https://trial.adnosaur.com/"
-                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors text-base"
+                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-6 rounded-2xl md:rounded-2xl transition-colors text-base w-full md:w-auto"
                 >
                   Find unsaturated fashion winners now
                 </Link>
-                <button className="border border-white/30 text-white hover:bg-white/5 font-medium py-4 px-8 rounded-2xl transition-colors text-base">
+                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 md:bg-transparent md:border-white/30 md:text-white md:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl md:rounded-2xl transition-colors text-base w-full md:w-auto">
                   See how it works
                 </button>
               </div>
 
               {/* Stats Cards with Images - Positioned at bottom edge */}
-              <div className="absolute left-4 right-4 md:left-12 md:right-12 -bottom-20 md:-bottom-115 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 perspective-1000">
+              <div className="absolute left-4 right-4 md:left-12 md:right-12 -bottom-20 md:-bottom-115 hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 perspective-1000">
                 {/* Before Card */}
                 <div className="relative transform md:-rotate-3 hover:rotate-0 transition-transform duration-300 md:scale-x-90">
                   <div
@@ -209,8 +207,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Animated Stats Counters */}
-      {/* inserted after hero */}
+      {/* Mobile-only Before/After cards (appear after hero). Desktop remains unchanged */}
+      <section className="md:hidden px-6 py-0 mb-20">
+        <div className="space-y-8">
+          {/* Before Card */}
+          <div className="relative bg-white border border-gray-200 rounded-2xl shadow-sm p-3">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-extrabold px-3 py-1 rounded-full shadow-[1px_4px_0_rgba(0,0,0,1)]">
+              Before
+            </div>
+            <img
+              src="/Image 1.png"
+              alt="Before - Total sales €1,782"
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+
+          {/* After Card */}
+          <div className="relative bg-white border border-gray-200 rounded-2xl shadow-sm p-3">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-extrabold px-3 py-1 rounded-full shadow-[1px_4px_0_rgba(0,0,0,1)]">
+              After
+            </div>
+            <div className="relative">
+              <img
+                src="/Image 2.png"
+                alt="After - Total sales €247,058"
+                className="w-full h-auto rounded-xl"
+              />
+              {/* Shopify-style animated notifications overlay */}
+              <AnimatedNotifications side="left" className="scale-75" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Stats Counters (come after the mobile Before/After cards) */}
       <StatsCounters
         stats={[
           { id: "stores", label: "STORES LISTED", value: 115426 },
@@ -220,9 +250,9 @@ export default function Home() {
       />
 
       {/* Product Research Method Section */}
-      <section className="py-25 px-4 bg-transparent ">
+      <section className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-15">
+          <h2 className="text-[1.7rem]  md:text-5xl font-bold text-gray-900 mb-4 md:leading-15 leading-10">
             Your product research method
             <br />
             is losing you <span className="text-[#bfbfbd]">time and money.</span>
@@ -232,7 +262,7 @@ export default function Home() {
           </p>
 
               {/* Product Search Cards Section */}
-      <section className="px-4 bg-transparent">
+      <section className="px-2 md:px-4 bg-transparent">
         <ProductSearchCards />
       </section>
         </div>
@@ -241,17 +271,17 @@ export default function Home() {
       {/* Video Section */}
       <section className=" px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 text-center leading-15">
-            Watch how Adnosaur helps you find
-            <br />
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 text-center md:leading-15 leading:9">
+            Watch how Adnosaur helps you find{" "}
+            <br className="hidden md:block" />
             <span className="text-[#949494]">
               unsaturated fashion products
             </span>{" "}
             in your country.
           </h2>
 
-          <div className="mt-12 rounded-[2.5rem] overflow-hidden ">
-            <div className="relative" style={{ paddingBottom: "56.25%" }}>
+          <div className="mt-12 rounded-2xl md:rounded-[2.5rem] overflow-hidden ">
+            <div className="relative pb-[62%] md:pb-[56.25%]">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/3sqzo_CmXWM"
@@ -286,7 +316,7 @@ export default function Home() {
       {/* Competitors Section */}
       <section className="py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 text-center leading-16">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 text-center md:leading-16 leading-10">
             Your smartest competitors are
             <br />
             already using <span className="text-[#949494]">Adnosaur!</span>
