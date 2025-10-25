@@ -19,7 +19,7 @@ export default function Footer() {
                 className="h-8 w-auto"
               />
             </div>
-            <p className="text-gray-600 text-sm w-1/3">
+            <p className="text-gray-600 text-sm w-full md:w-1/3">
               *Within two weeks, our biggest beta client's winning rate improved
               from 16% to 31% on average across six stores.
             </p>

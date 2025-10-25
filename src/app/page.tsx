@@ -33,7 +33,7 @@ const InfoBadge = ({
   videoSrc,
   beforeSrc,
   afterSrc,
-  title = "More info",
+  title = "",
 }: {
   src?: string;
   videoSrc?: string;
@@ -55,7 +55,7 @@ const InfoBadge = ({
     >
       {/* Video tooltip */}
       {videoSrc ? (
-        <span className="relative block w-24 sm:w-28 h-48 bg-white rounded-xl shadow-xl border-2 border-black overflow-hidden">
+        <span className="relative block w-32 sm:w-28 h-48 bg-white rounded-xl shadow-xl border-4 md:border-2 border-black overflow-hidden translate-x-10 translate-y-20">
           <video
             src={videoSrc}
             autoPlay
@@ -67,7 +67,7 @@ const InfoBadge = ({
         </span>
       ) : src ? (
         /* Single image tooltip */
-        <span className="relative block w-24 sm:w-28 h-56 bg-white rounded-xl shadow-xl border-2 border-black overflow-hidden">
+        <span className="relative block w-32 sm:w-28 h-56 bg-white rounded-xl shadow-xl border-4 md:border-2 border-black  overflow-hidden translate-x-10 translate-y-20 sm:translate-x-0 sm:translate-y-0">
           <Image src={src} alt={title} fill className="object-cover" />
         </span>
       ) : (
@@ -273,7 +273,7 @@ export default function Home() {
 
       {/* Product Research Method Section */}
       <section className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-3xl md:max-w-4xl lg:max-w-6xl mx-auto text-center">
           <h2 className="text-[1.7rem]  md:text-5xl font-bold text-gray-900 mb-4 md:leading-15 leading-10">
             Your product research method
             <br />
@@ -340,7 +340,7 @@ export default function Home() {
 
       {/* Competitors Section */}
       <section className="py-20 px-4 bg-transparent">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 text-center md:leading-16 leading-10">
             Your smartest competitors are
             <br />
@@ -385,13 +385,13 @@ export default function Home() {
       {/* Features Comparison Table */}
       <section className="py-12 md:py-20 px-2 md:px-4 bg-transparent overflow-x-hidden">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-8 md:mb-12 px-4">
+          <h2 className="text-[2.5rem] md:text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-8 md:mb-12 px-4">
             Features that <span className="text-gray-400">set us apart</span>
           </h2>
 
           {/* Desktop Table View */}
           <div className="hidden md:block bg-white rounded-xl md:rounded-2xl overflow-visible">
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto md:overflow-visible">
               <table className="w-full min-w-[600px]">
                 <thead>
                   <tr className="">
@@ -413,7 +413,7 @@ export default function Home() {
                     <td colSpan={4} className="p-0"></td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-[18px] md:text-sm font-semibold text-gray-900">
                       Facebook ads
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
@@ -427,7 +427,7 @@ export default function Home() {
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-[18px] md:text-sm font-semibold text-gray-900">
                       Tiktok/Pinterest ads
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
@@ -441,7 +441,7 @@ export default function Home() {
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-[18px] md:text-sm font-semibold text-gray-900">
                       Import/copy competitor product listings
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4]">
@@ -457,9 +457,9 @@ export default function Home() {
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm font-semibold text-gray-900">
+                    <td className="py-2 md:py-3 px-2 md:px-4 text-[18px] md:text-sm font-semibold text-gray-900">
                       Product focused approach
-                      <div className="text-[10px] md:text-[12px] text-gray-400 font-light mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400 font-light mt-0.5">
                         See all competitors for each product
                       </div>
                     </td>
@@ -478,10 +478,10 @@ export default function Home() {
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="py-2 md:py-3 px-2 md:px-4">
-                      <div className="text-xs md:text-sm font-semibold text-gray-900">
+                      <div className="text-[18px] md:text-sm font-semibold text-gray-900">
                         Focus
                       </div>
-                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400 mt-0.5">
                         Only focuses on one specific niche and platform.
                       </div>
                     </td>
@@ -497,10 +497,10 @@ export default function Home() {
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="py-2 md:py-3 px-2 md:px-4">
-                      <div className="text-xs md:text-sm font-semibold text-gray-900">
+                      <div className="text-[18px] md:text-sm font-semibold text-gray-900">
                         Fair pricing
                       </div>
-                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400 mt-0.5">
                         Don’t work with coaches who take 50% affiliate fee.
                       </div>
                     </td>
@@ -516,10 +516,10 @@ export default function Home() {
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="py-2 md:py-3 px-2 md:px-4">
-                      <div className="text-xs md:text-sm font-semibold text-gray-900">
+                      <div className="text-[18px] md:text-sm font-semibold text-gray-900">
                         Protection against saturation
                       </div>
-                      <div className="text-[10px] md:text-[12px] text-gray-400  mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400  mt-0.5">
                         Only work with a limited number of dropshippers.
                       </div>
                     </td>
@@ -536,14 +536,14 @@ export default function Home() {
                   <tr className="border-b border-gray-100">
                     <td className="py-2 md:py-3 px-2 md:px-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs md:text-sm font-semibold text-gray-900">
+                        <span className="text-[18px] md:text-sm font-semibold text-gray-900">
                           AI product listing
                         </span>
                         <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">
                           BETA
                         </span>
                       </div>
-                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400 mt-0.5">
                         Replace your product lister with better quality AI
                         listings.
                       </div>
@@ -561,7 +561,7 @@ export default function Home() {
                   <tr className="border-b border-gray-100">
                     <td className="py-2 md:py-3 px-2 md:px-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs md:text-sm font-semibold text-gray-900">
+                        <span className="text-[18px] md:text-sm font-semibold text-gray-900">
                           AI product images
                         </span>
                         <InfoBadge
@@ -572,7 +572,7 @@ export default function Home() {
                           BETA
                         </span>
                       </div>
-                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400 mt-0.5">
                         Brand your store with AI fashion models.
                       </div>
                     </td>
@@ -589,7 +589,7 @@ export default function Home() {
                   <tr>
                     <td className="py-2 md:py-3 px-2 md:px-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs md:text-sm font-semibold text-gray-900">
+                        <span className="text-[18px] md:text-sm font-semibold text-gray-900">
                           AI product videos
                         </span>
                         <InfoBadge
@@ -600,7 +600,7 @@ export default function Home() {
                           BETA
                         </span>
                       </div>
-                      <div className="text-[10px] md:text-[12px] text-gray-400 mt-0.5">
+                      <div className="text-[15px] md:text-[12px] text-gray-400 mt-0.5">
                         Brand your store with AI fashion videos.
                       </div>
                     </td>
@@ -823,7 +823,7 @@ export default function Home() {
                   <div className="font-semibold text-sm text-gray-900">
                     AI product images
                   </div>
-                  <InfoBadge src="/firsttooltipImg.avif" title="Preview" />
+                  <InfoBadge src="/firsttooltipImg.avif" />
                   <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">
                     BETA
                   </span>
@@ -852,10 +852,7 @@ export default function Home() {
                   <div className="font-semibold text-sm text-gray-900">
                     AI product videos
                   </div>
-                  <InfoBadge
-                    videoSrc="/tooltipvideo.mp4"
-                    title="Video Preview"
-                  />
+                  <InfoBadge videoSrc="/tooltipvideo.mp4" />
                   <span className="text-[9px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-medium">
                     BETA
                   </span>
@@ -883,11 +880,11 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4 text-center">
+          <h2 className="text-[2rem] md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4 text-center">
             Lock in your seat for a{" "}
             <span className="text-gray-400">fair price</span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 text-center max-w-2xl mx-auto mb-8 md:mb-12 px-2">
+          <p className="text-[17px] md:text-base text-gray-600 text-center max-w-2xl mx-auto mb-8 md:mb-12 px-2">
             Product research tools lose their edge when used by everybody.
             Therefore, we will only allow 500 dropshippers to work with us. Lock
             in your seat now with up to 80% discount!
@@ -895,8 +892,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Starter Plan */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
-              <div className="text-lg font-bold text-gray-900 mb-4">
+            <div className="bg-transparent border border-gray-200 rounded-2xl p-6 md:p-8">
+              <div className="text-[22px] md:text-lg font-bold text-gray-900 mb-4">
                 Starter plan
               </div>
               <div className="mb-6">
@@ -928,7 +925,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-700 flex items-center gap-1">
+                  <span className="text-[17px] md:text-sm text-gray-700 flex items-center gap-1">
                     2000 credits
                     <span className="group relative inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-400 text-xs cursor-help">
                       i
@@ -982,7 +979,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Pre-set filters to find winners
                   </span>
                 </li>
@@ -1002,7 +999,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">Magic search</span>
+                  <span className="text-[15px] md:text-sm text-gray-600">Magic search</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1020,7 +1017,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     WhatsApp customer service
                   </span>
                 </li>
@@ -1040,7 +1037,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Access to 5M+ fashion dropshipping ads
                   </span>
                 </li>
@@ -1060,7 +1057,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Access to 550K+ fashion dropshipping products
                   </span>
                 </li>
@@ -1080,7 +1077,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Access to 115K+ fashion dropshipping stores
                   </span>
                 </li>
@@ -1100,7 +1097,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Advanced filters on ads, products, and stores
                   </span>
                 </li>
@@ -1146,7 +1143,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-700">
+                  <span className="text-base text-gray-700">
                     Everything in the starter plan
                   </span>
                 </li>
@@ -1220,7 +1217,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     One-click import competitors' product pages
                   </span>
                 </li>
@@ -1240,7 +1237,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     12 hand-picked bestsellers
                   </span>
                 </li>
@@ -1260,7 +1257,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Connect up to three stores
                   </span>
                 </li>
@@ -1268,7 +1265,7 @@ export default function Home() {
             </div>
 
             {/* Pro Plan */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+            <div className="bg-transparent border border-gray-200 rounded-2xl p-8">
               <div className="flex items-center gap-2 mb-4">
                 <div className="text-lg font-bold text-gray-900">Pro Plan</div>
                 <div className="bg-gray-100 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
@@ -1326,7 +1323,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Unlimited credits & stores connected
                   </span>
                 </li>
@@ -1346,7 +1343,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">200 AI credits</span>
+                  <span className="text-[15px] md:text-sm text-gray-600">200 AI credits</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1364,7 +1361,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     AI-generated product pages (1 credit per product page)
                   </span>
                 </li>
@@ -1384,7 +1381,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     AI-generated branded product images (5 credit per image)
                   </span>
                 </li>
@@ -1404,7 +1401,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     AI-generated branded product videos (10 credits per video)
                   </span>
                 </li>
@@ -1424,7 +1421,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-600">
+                  <span className="text-[15px] md:text-sm text-gray-600">
                     Auto-push products
                   </span>
                 </li>
@@ -1437,7 +1434,7 @@ export default function Home() {
       {/* FAQ Section */}
       <section id="faq" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 md:mb-12 text-center px-2">
+          <h2 className="text-[2rem] md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 md:mb-12 text-center px-2">
             Frequently asked questions
           </h2>
 
@@ -1450,11 +1447,11 @@ export default function Home() {
                 <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   How does Adnosaur save me time and money?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
                 Adnosaur is essentially the Facebook ads library on steroids.
                 You can filter all ads, see all competitor stores for each
                 product, and easily list the products you want to sell in your
@@ -1470,11 +1467,11 @@ export default function Home() {
                 <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   How can I find the best products to sell?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
                 <p className="mb-2">
                   Watch this video to get started:
                   https://www.youtube.com/watch?v=2JxBEhrkVWQ
@@ -1494,11 +1491,11 @@ export default function Home() {
                 <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   How can I estimate the saturation of a product?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
                 Use our saturation analysis tools to see how many competitors
                 are selling similar products and evaluate market opportunities.
               </div>
@@ -1512,11 +1509,11 @@ export default function Home() {
                 <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   Why does Adnosaur focus on fashion only?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
                 Fashion is one of the largest and most dynamic eCommerce
                 categories. By specializing in fashion, we can provide more
                 accurate data and better insights specific to this market.
@@ -1531,11 +1528,11 @@ export default function Home() {
                 <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   What is unique about Adnosaur?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
                 Adnosaur combines powerful ad tracking, competitor analysis, and
                 product research tools in one platform, specifically optimized
                 for fashion products.
@@ -1550,11 +1547,11 @@ export default function Home() {
                 <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
                   ×
                 </span>
-                <span className="flex-1 font-semibold text-gray-900 text-sm md:text-base">
+                <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   Why won't we add Pinterest and TikTok?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-xs md:text-sm leading-relaxed">
+              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
                 We focus on Facebook ads because they provide the most
                 comprehensive data and are the primary advertising platform for
                 fashion products. This allows us to deliver higher quality

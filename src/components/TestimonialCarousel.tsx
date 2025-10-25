@@ -55,8 +55,8 @@ export default function TestimonialCarousel({
   };
 
   return (
-  <div className="mt-12 relative max-w-[320px] md:max-w-3xl mx-auto">
-      <div className="bg-white rounded-3xl p-4 shadow-sm overflow-hidden">
+  <div className="mt-12 relative max-w-[320px] md:max-w-2xl lg:max-w-3xl mx-auto">
+    <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-sm overflow-hidden">
         <div
           className="relative overflow-hidden transition-[height] duration-300"
           style={{ height: containerHeight }}
@@ -71,10 +71,10 @@ export default function TestimonialCarousel({
                 ref={(el) => {
                   slideRefs.current[index] = el;
                 }}
-                className="min-w-full flex flex-col md:flex-row items-center gap-5"
+                className="min-w-full flex flex-col md:flex-row items-center gap-5 md:gap-8"
               >
                 {/* Chart/Image Section */}
-                <div className="flex-1 max-w-xs overflow-hidden rounded-2xl border border-gray-200">
+                <div className="flex-1 max-w-[260px] md:max-w-[220px] lg:max-w-xs overflow-hidden rounded-2xl border border-gray-200">
                   <div className="bg-white rounded-2xl p-0 min-h-[10px] flex items-center justify-center overflow-hidden">
                     <Image
                       src={testimonial.chartImage}
@@ -87,7 +87,7 @@ export default function TestimonialCarousel({
                 </div>
 
                 {/* Testimonial Content */}
-                <div className="flex-1 relative font-roboto">
+                <div className="flex-1 relative font-roboto max-w-[420px] md:max-w-[360px] lg:max-w-none">
                   <div className="space-y-6">
                     <p className="text-black font-medium text-base leading-relaxed">
                       {testimonial.quote}
