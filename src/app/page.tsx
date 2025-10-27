@@ -102,12 +102,12 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen">
-  <section className="relative py-10 md:py-12 md:text-white overflow-visible flex items-center justify-center min-h-[90vh]">
-        <div className="max-w-[1200px] w-full mx-auto px-4">
+  <section className="relative py-10 md:py-10  md:text-white overflow-visible flex items-center justify-center min-h-[90vh]">
+        <div className="max-w-[1200px] w-full px-6">
           {/* Contained card with rounded corners */}
-          <div className="bg-transparent md:bg-[#1a1a1a] rounded-3xl p-2 md:p-12 pb-8 md:pb-90 relative overflow-hidden md:shadow-none">
+          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem] p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none">
             <div className="text-center relative z-10">
-              <h1 className="text-[2rem] md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-gray-900 md:text-white w-full">
+              <h1 className="text-[2rem] md:text-4xl lg:text-[52px] font-bold mb-6 leading-[62.4px] text-gray-900 md:text-white w-full">
                 Find and list unsaturated{" "}
                 <span className="text-primary">
                   winning fashion products
@@ -115,12 +115,12 @@ export default function Home() {
                 in seconds.
               </h1>
 
-              <p className="text-base md:text-lg text-gray-600 md:text-gray-400 mb-8 max-w-4xl mx-auto">
+              <p className="text-base md:text-[16px] text-gray-600 md:text-[#a7a5a7] md:font-normal mb-8 max-w-4xl mx-auto">
                 Increase your winning product rate up to 31%* — without wasting
                 time and money testing saturated products.
               </p>
 
-              <div className="space-y-3 mb-8 max-w-2xl mx-auto text-left text-base">
+              <div className="space-y-3 mb-8 max-w-2xl mx-auto text-center md:max-w-xl text-base md:text-[14.5px]">
                 <div className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-primary mt-1 flex-shrink-0"
@@ -176,14 +176,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-0 md:mb-10">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-0 md:mb-10">
                 <Link
                   href="https://trial.adnosaur.com/"
-                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-6 rounded-2xl md:rounded-2xl transition-colors text-base w-full md:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl md:rounded-2xl transition-colors text-base md:text-[15px] w-full md:w-auto"
                 >
                   Find unsaturated fashion winners now
                 </Link>
-                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 md:bg-transparent md:border-white/30 md:text-white md:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl md:rounded-2xl transition-colors text-base w-full md:w-auto">
+                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 md:bg-transparent md:border-white/30 md:text-white md:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl md:rounded-2xl transition-colors text-base md:text-[15px] w-full md:w-auto">
                   See how it works
                 </button>
               </div>
@@ -191,9 +191,9 @@ export default function Home() {
               {/* Stats Cards with Images - Positioned at bottom edge */}
               <div className="absolute left-4 right-4 md:left-12 md:right-12 -bottom-20 md:-bottom-115 hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 perspective-1000">
                 {/* Before Card */}
-                <div className="relative transform md:-rotate-3 hover:rotate-0 transition-transform duration-300 md:scale-x-90">
+                <div className="relative transform md:-rotate-3 transition-transform duration-300 md:scale-x-90">
                   <div
-                    className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white text-black text-sm md:text-base font-extrabold px-5 py-2 rounded-full shadow-[1px_7px_0_rgba(0,0,0,1)]
+                    className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white text-[#364343] text-sm md:text-[19px] font-semibold px-[20px] py-[6px] rounded-full shadow-[1px_5px_0_rgba(0,0,0,1)]
  z-10"
                   >
                     Before
@@ -206,9 +206,9 @@ export default function Home() {
                 </div>
 
                 {/* After Card */}
-                <div className="relative transform md:rotate-3 hover:rotate-0 transition-transform duration-300 md:scale-x-90">
+                <div className="relative transform md:rotate-3 transition-transform duration-300 md:scale-x-90">
                   <div
-                    className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white text-black text-sm md:text-base font-extrabold px-5 py-2 rounded-full shadow-[1px_7px_0_rgba(0,0,0,1)]
+                    className="absolute -top-5 left-1/2 -translate-x-1/2 bg-white text-[#364343] text-sm md:text-[19px] font-semibold px-[20px] py-[5px] rounded-full shadow-[1px_5px_0_rgba(0,0,0,1)]
  z-10"
                   >
                     After

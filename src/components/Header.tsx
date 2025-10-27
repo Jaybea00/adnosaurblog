@@ -7,15 +7,15 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-6 left-0 right-0 z-50 px-4 font-polysans-media ">
+    <header className="fixed top-9 left-0 right-0 z-50 px-4 font-polysans-media ">
       <nav className="max-w-[330px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full shadow-lg">
-        <div className="flex justify-between items-center h-14 pl-6 pr-3">
+        <div className="flex justify-between items-center h-14 pl-3 pr-3">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img
               src="/logo.png"
               alt="Adnosaur Logo"
-              className="h-6 w-auto max-w-27"
+              className="h-6 w-auto max-w-30"
             />
           </Link>
 
@@ -23,25 +23,25 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/blog"
-              className="text-sm text-white hover:text-primary transition-colors font-bold"
+              className="text-[16px] text-white hover:text-primary transition-colors font-semibold"
             >
               BLOG
             </Link>
             <Link
               href="/#pricing"
-              className="text-sm text-white hover:text-primary transition-colors font-bold"
+              className="text-[16px] text-white hover:text-primary transition-colors font-semibold"
             >
               PRICING
             </Link>
             <Link
               href="/#faq"
-              className="text-sm text-white hover:text-primary transition-colors font-bold"
+              className="text-[16px] text-white hover:text-primary transition-colors font-semibold"
             >
               FAQ'S
             </Link>
             <Link
               href="/contact"
-              className="text-sm text-white hover:text-primary transition-colors font-bold"
+              className="text-[16px] text-white hover:text-primary transition-colors font-semibold"
             >
               CONTACT
             </Link>
@@ -51,13 +51,13 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-3">
             <Link
               href="https://app.adnosaur.com/login/"
-              className="text-sm text-white hover:text-white hover:bg-gray-600 transition-all font-bold border border-white hover:border-transparent rounded-full px-4 py-2"
+              className="text-sm md:text-[16px] text-white hover:text-white hover:bg-gray-600 transition-all font-semibold border border-white hover:border-transparent rounded-full px-4 py-2"
             >
               Log in
             </Link>
             <Link
               href="https://trial.adnosaur.com/"
-              className="bg-primary text-sm font-bold py-2 px-5 rounded-full"
+              className="bg-primary text-sm md:text-[16px] font-semibold py-2 px-5 rounded-full"
             >
               <span>Try out - </span>
               <span className="text-gray-500">No login required</span>
