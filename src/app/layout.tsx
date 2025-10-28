@@ -20,6 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/PolySans-Median.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap"
+        />
+      </head>
       <body>
         <Header />
         <main className="min-h-screen pt-20">{children}</main>
