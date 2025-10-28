@@ -115,12 +115,12 @@ export default function Home() {
                 in seconds.
               </h1>
 
-              <p className="text-base md:text-[16px] text-gray-600 md:text-[#a7a5a7] md:font-normal mb-8 max-w-4xl mx-auto">
+              <p className="text-base md:text-[16px] text-gray-600 md:text-[#a7a5a7] md:font-normal mb-8 max-w-4xl mx-auto font-geist">
                 Increase your winning product rate up to 31%* — without wasting
                 time and money testing saturated products.
               </p>
 
-              <div className="space-y-3 mb-8 max-w-2xl mx-auto text-center md:max-w-xl text-base md:text-[14.5px]">
+              <div className="space-y-3 mb-8 max-w-2xl mx-auto text-center md:max-w-xl text-base md:text-[14px] font-inter">
                 <div className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-primary mt-1 flex-shrink-0"
@@ -274,7 +274,7 @@ export default function Home() {
       {/* Product Research Method Section */}
       <section className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
         <div className="max-w-3xl md:max-w-4xl lg:max-w-6xl mx-auto text-center">
-          <h2 className="text-[1.7rem]  md:text-5xl font-bold text-gray-900 mb-4 md:leading-15 leading-10">
+          <h2 className="text-[1.7rem]  md:text-[45px] font-bold text-gray-900 mb-4 md:leading-[54px] leading-10">
             Your product research method
             <br />
             is losing you{" "}
@@ -295,9 +295,9 @@ export default function Home() {
       </section>
 
       {/* Video Section */}
-      <section className=" px-4 bg-gray-50">
+  <section className="px-4 bg-gray-50 font-polysans">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 text-center md:leading-15 leading:9">
+          <h2 className="text-2xl md:text-[45px] font-semibold  text-gray-900 mb-4 text-center md:leading-[54px] leading:9">
             Watch how Adnosaur helps you find{" "}
             <br className="hidden md:block" />
             <span className="text-[#949494]">

@@ -44,7 +44,7 @@ export default function ProductSearchCards() {
           >
             {/* Numbered Badge */}
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#7DFF7D] rounded-full flex items-center justify-center shadow-lg z-10">
-              <span className="text-black text-2xl font-bold">{card.id}</span>
+              <span className="text-[#076f16] text-2xl font-bold">{card.id}</span>
             </div>
 
             {/* Icon/Image Area */}
@@ -59,12 +59,12 @@ export default function ProductSearchCards() {
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+            <h3 className="text-[20px] leading-[28px] font-semibold text-gray-900 mb-3 text-center">
               {card.title}
             </h3>
 
             {/* Description */}
-            <p className="text-lg text-gray-400 leading-relaxed font-normal text-center">
+            <p className="text-[16px] text-gray-400 leading-[24px] font-normal text-center">
               {card.description}
             </p>
           </div>
