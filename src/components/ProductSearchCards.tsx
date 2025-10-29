@@ -35,12 +35,12 @@ export default function ProductSearchCards() {
   ];
 
   return (
-    <div className="max-w-[1100px] md:max-w-[900px] lg:max-w-[1400px] mx-auto px-2 md:px-4 ">
+  <div className="max-w-[1100px] md:max-w-[900px] lg:max-w-[1400px] mx-auto px-2 md:px-4 font-geist">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-20 justify-items-center md:justify-items-stretch">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="relative bg-white rounded-2xl p-5 md:p-7 lg:p-8 transition-shadow w-full max-w-[400px] md:max-w-[320px] md:min-w-[300px] lg:max-w-none lg:min-w-[380px] mx-auto"
+            className="relative bg-white rounded-2xl p-5 md:p-7 lg:p-7 transition-shadow w-full max-w-[400px] md:max-w-[320px] md:min-w-[300px] lg:max-w-none lg:min-w-[380px] mx-auto"
           >
             {/* Numbered Badge */}
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#7DFF7D] rounded-full flex items-center justify-center shadow-lg z-10">
@@ -64,7 +64,7 @@ export default function ProductSearchCards() {
             </h3>
 
             {/* Description */}
-            <p className="text-[16px] text-gray-400 leading-[24px] font-normal text-center">
+            <p className="text-[16px] text-[#909293] leading-[24px] font-normal text-center">
               {card.description}
             </p>
           </div>
