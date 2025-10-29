@@ -8,14 +8,14 @@ export default function Header() {
 
   return (
     <header className="header-slide-in fixed top-9 left-0 right-0 z-50 px-4 font-polysans-media">
-      <nav className="max-w-[330px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full shadow-lg">
-        <div className="flex justify-between items-center h-14 pl-3 pr-3">
+      <nav className="max-w-[350px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full shadow-lg">
+        <div className="flex justify-between items-center h-14 md:pl-3 md:pr-3 px-6 py-8 ">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img
               src="/logo.png"
               alt="Adnosaur Logo"
-              className="h-6 w-auto max-w-30"
+              className="h-6 w-auto max-w-30 "
             />
           </Link>
 

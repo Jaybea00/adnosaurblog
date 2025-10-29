@@ -19,7 +19,7 @@ export default function Footer() {
                 className="h-8 w-auto"
               />
             </div>
-            <p className="text-gray-600 text-sm w-full md:w-1/3">
+            <p className="text-gray-600 text-sm w-full md:w-1/3 font-inter">
               *Within two weeks, our biggest beta client's winning rate improved
               from 16% to 31% on average across six stores.
             </p>
@@ -30,7 +30,7 @@ export default function Footer() {
             {/* Quick Links */}
             <div>
               <h3 className="text-gray-900 font-bold mb-4">PRACTICAL LINKS</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 font-inter">
                 <li>
                   <Link
                     href="https://app.adnosaur.com/login"
@@ -53,7 +53,7 @@ export default function Footer() {
             {/* Company */}
             <div>
               <h3 className="text-gray-900 font-bold mb-4">CONTACT US</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 font-inter">
                 <li>
                   <Link
                     href="https://adnosaur.com/contact"
@@ -76,7 +76,7 @@ export default function Footer() {
             {/* Follow Us */}
             <div>
               <h3 className="text-gray-900 font-bold mb-4">FOLLOW US</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 font-inter">
                 <li>
                   <a
                     href="https://www.tiktok.com/@adnosaur"
@@ -130,7 +130,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-dark-tertiary mt-4 pt-4">
+        <div className="border-t border-dark-tertiary mt-4 pt-4 font-inter">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-gray-800 text-sm">
             <p>
               &copy; {new Date().getFullYear()} Adnosaur. All rights reserved.

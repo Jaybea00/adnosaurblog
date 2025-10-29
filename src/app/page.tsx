@@ -7,14 +7,14 @@ import VideoOnScroll from "@/components/VideoOnScroll";
 import Image from "next/image";
 
 // Small helper for green/orange round badges with a white check
-const CircleCheck = ({ color = "green" }: { color?: "green" | "orange" }) => (
+const CircleCheck = ({ color = "#0ba100" }: { color?: "#0ba100" | "orange" }) => (
   <div
-    className={`w-5 h-5 rounded-full mx-auto flex items-center justify-center ${
-      color === "orange" ? "bg-orange-400" : "bg-primary"
+    className={`w-6 h-6 rounded-full mx-auto flex items-center justify-center ${
+      color === "orange" ? "bg-orange-400" : "bg-[#0ba100]"
     }`}
   >
     <svg
-      className="w-3 h-3 text-white"
+      className="w-4 h-4 text-white"
       viewBox="0 0 20 20"
       fill="currentColor"
       aria-hidden="true"
@@ -103,17 +103,17 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen">
-  <section className="relative py-10 md:py-10  md:text-white overflow-visible flex items-center justify-center min-h-[90vh]">
+  <section className="relative  md:py-10  md:text-white overflow-visible flex items-center justify-center min-h-[90vh] py-0">
         <div className="max-w-[1200px] w-full px-6">
           {/* Contained card with rounded corners */}
-          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem] p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none">
+          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none py-12">
             <div className="text-center relative z-10">
-              <h1 className="text-[2rem] md:text-4xl lg:text-[52px] font-bold mb-6 leading-[62.4px] text-gray-900 md:text-white w-full">
+              <h1 className="text-[27px] md:text-4xl lg:text-[52px] font-bold leading-[32px] mb-6 md:leading-[62.4px] text-gray-900 md:text-white w-full max-w-4xl ">
                 Find and list unsaturated{" "}
-                <span className="text-primary">
+                <span className=" text-[#0fb004] md:text-[#8fff87] ">
                   winning fashion products
                 </span>{" "}<br className="md:hidden" />
-                in seconds.
+                 in seconds.
               </h1>
 
               <p className="text-base md:text-[16px] text-gray-600 md:text-[#a7a5a7] md:font-normal mb-8 max-w-4xl mx-auto font-geist">
@@ -121,7 +121,7 @@ export default function Home() {
                 time and money testing saturated products.
               </p>
 
-              <div className="space-y-3 mb-8 max-w-2xl mx-auto text-center md:max-w-xl text-base md:text-[14px] font-inter">
+              <div className="space-y-3 mb-8 max-w-2xl mx-auto md:text-center text-left md:max-w-xl text-[14px] md:text-[14px] font-inter">
                 <div className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-primary mt-1 flex-shrink-0"
@@ -180,11 +180,11 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-0 md:mb-10">
                 <Link
                   href="https://trial.adnosaur.com/"
-                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl md:rounded-2xl transition-colors text-base md:text-[15px] w-full md:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl md:rounded-2xl transition-colors text-[15px] md:text-[15px] w-full md:w-auto"
                 >
                   Find unsaturated fashion winners now
                 </Link>
-                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 md:bg-transparent md:border-white/30 md:text-white md:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl md:rounded-2xl transition-colors text-base md:text-[15px] w-full md:w-auto">
+                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 md:bg-transparent md:border-white/30 md:text-white md:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl md:rounded-2xl transition-colors text-[15px] md:text-[15px] w-full md:w-auto">
                   See how it works
                 </button>
               </div>
@@ -220,10 +220,12 @@ export default function Home() {
                       alt="After - Total sales €247,058"
                       className="w-full h-auto rounded-xl shadow-xl"
                     />
-                    {/* Animated Notifications Overlay */}
-                    <AnimatedNotifications />
+                  
                   </div>
+                  
                 </div>
+                  {/* Animated Notifications Overlay */}
+                    <AnimatedNotifications />
               </div>
             </div>
           </div>
@@ -232,7 +234,7 @@ export default function Home() {
 
       {/* Mobile-only Before/After cards (appear after hero). Desktop remains unchanged */}
       <section className="md:hidden px-6 py-0 mb-20">
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-[300px] mx-auto">
           {/* Before Card */}
           <div className="relative bg-white border border-gray-200 rounded-2xl shadow-sm p-3">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-extrabold font-inter px-3 py-1 rounded-full shadow-[1px_4px_0_rgba(0,0,0,1)]">
@@ -241,20 +243,20 @@ export default function Home() {
             <img
               src="/Image 1.png"
               alt="Before - Total sales €1,782"
-              className="w-full h-auto rounded-xl"
+              className="w-[100%]  rounded-xl"
             />
           </div>
 
           {/* After Card */}
           <div className="relative bg-white border border-gray-200 rounded-2xl shadow-sm p-3">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-extrabold font-inter px-3 py-1 rounded-full shadow-[1px_4px_0_rgba(0,0,0,1)]">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 max-sm:-translate-y-1 bg-white text-black text-xs font-extrabold font-inter px-3 py-1 rounded-full shadow-[1px_4px_0_rgba(0,0,0,1)]">
               After
             </div>
             <div className="relative">
               <img
                 src="/Image 2.png"
                 alt="After - Total sales €247,058"
-                className="w-full h-auto rounded-xl"
+                className="w-[100%] mx-auto h-auto rounded-xl"
               />
               {/* Shopify-style animated notifications overlay */}
               <AnimatedNotifications side="left" className="scale-75" />
@@ -426,7 +428,7 @@ export default function Home() {
                       Tiktok/Pinterest ads
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4] md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
                       <CircleCheck />
@@ -443,7 +445,7 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
                       <span className="text-gray-400 text-xs">
@@ -484,10 +486,10 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -503,10 +505,10 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -522,10 +524,10 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -550,7 +552,7 @@ export default function Home() {
                       <CircleCheck color="orange" />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -578,7 +580,7 @@ export default function Home() {
                       <CircleCheck color="orange" />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-black text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                   </tr>
                   <tr>
@@ -603,10 +605,10 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-400 text-xs">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">×</span>
                     </td>
                   </tr>
                 </tbody>
@@ -659,7 +661,7 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   <div className="bg-[#F6FFF4] rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
                     <CircleCheck />
@@ -682,7 +684,7 @@ export default function Home() {
                     <CircleCheck />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
                     <CircleCheck />
@@ -728,10 +730,10 @@ export default function Home() {
                     <CircleCheck />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                 </div>
               </div>
@@ -751,10 +753,10 @@ export default function Home() {
                     <CircleCheck />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                 </div>
               </div>
@@ -774,10 +776,10 @@ export default function Home() {
                     <CircleCheck />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                 </div>
               </div>
@@ -805,7 +807,7 @@ export default function Home() {
                     <CircleCheck color="orange" />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                 </div>
               </div>
@@ -834,7 +836,7 @@ export default function Home() {
                     <CircleCheck color="orange" />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                 </div>
               </div>
@@ -860,10 +862,10 @@ export default function Home() {
                     <CircleCheck />
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                   <div className="bg-gray-50 rounded-lg py-4 flex justify-center">
-                    <span className="text-gray-400 text-xl">×</span>
+                    <span className="text-gray-400 text-xl font-inter">×</span>
                   </div>
                 </div>
               </div>
@@ -875,20 +877,20 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[2rem] md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4 text-center">
+          <h2 className="text-[2rem] md:text-3xl lg:text-[45px] leading-[54px] font-normal text-gray-900 mb-3 md:mb-4 text-center">
             Lock in your seat for a{" "}
             <span className="text-gray-400">fair price</span>
           </h2>
-          <p className="text-[17px] md:text-base text-gray-600 text-center max-w-2xl mx-auto mb-8 md:mb-12 px-2">
+          <p className="text-[17px] md:text-[18px] text-[#2424248c] text-center max-w-[780px] mx-auto mb-8 md:mb-12 px-2 font-geist">
             Product research tools lose their edge when used by everybody.
             Therefore, we will only allow 500 dropshippers to work with us. Lock
-            in your seat now with up to 80% discount!
+            in your seat now with up to <span className="font-bold inline text-[#2424248c]">80% discount!</span>
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Starter Plan */}
             <div className="bg-transparent border border-gray-200 rounded-2xl p-6 md:p-8">
-              <div className="text-[22px] md:text-lg font-bold text-gray-900 mb-4">
+              <div className="text-[22px] md:text-lg font-bold text-gray-900 mb-4 font-inter">
                 Starter plan
               </div>
               <div className="mb-6">
@@ -899,13 +901,13 @@ export default function Home() {
               </div>
               <a
                 href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9CwEsOdJ7C9r&amount=10"
-                className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors mb-6 text-center"
+                className="block w-full font-inter bg-gray-100 hover:bg-[#8fff87] text-gray-900 font-semibold font-inter py-3 px-6 rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Get started
               </a>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -920,7 +922,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[17px] md:text-sm text-gray-700 flex items-center gap-1">
+                  <span className="flex items-center gap-1 text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     2000 credits
                     <span className="group relative inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-400 text-xs cursor-help">
                       i
@@ -959,7 +961,7 @@ export default function Home() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -974,12 +976,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Pre-set filters to find winners
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -994,10 +996,10 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">Magic search</span>
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">Magic search</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1012,12 +1014,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     WhatsApp customer service
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1032,12 +1034,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Access to 5M+ fashion dropshipping ads
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1052,12 +1054,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Access to 550K+ fashion dropshipping products
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1072,12 +1074,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Access to 115K+ fashion dropshipping stores
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1092,7 +1094,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Advanced filters on ads, products, and stores
                   </span>
                 </li>
@@ -1102,10 +1104,10 @@ export default function Home() {
             {/* Basic Plan (Most Popular) */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8">
               <div className="flex items-center gap-2 mb-4">
-                <div className="text-lg font-bold text-gray-900">
+                <div className="text-lg font-bold text-gray-900 font-inter">
                   Basic plan
                 </div>
-                <div className="bg-gray-100 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
+                <div className="bg-gray-100 font-inter text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
                   Most Popular
                 </div>
               </div>
@@ -1117,13 +1119,13 @@ export default function Home() {
               </div>
               <a
                 href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9EWjEjmIhmeO&amount=30"
-                className="block w-full bg-primary hover:bg-primary/90 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors mb-6 text-center"
+                className="block w-full bg-primary hover:bg-[#8fff87] text-gray-900 font-semibold py-3 px-6 font-inter rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Get started
               </a>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1138,12 +1140,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-base text-gray-700">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Everything in the starter plan
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1158,7 +1160,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-700 flex items-center gap-1">
+                  <span className="flex items-center gap-1 text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     10000 credits
                     <span className="group relative inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-gray-400 text-xs cursor-help">
                       i
@@ -1197,7 +1199,7 @@ export default function Home() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1212,12 +1214,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     One-click import competitors' product pages
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1232,12 +1234,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     12 hand-picked bestsellers
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1252,7 +1254,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Connect up to three stores
                   </span>
                 </li>
@@ -1262,8 +1264,8 @@ export default function Home() {
             {/* Pro Plan */}
             <div className="bg-transparent border border-gray-200 rounded-2xl p-8">
               <div className="flex items-center gap-2 mb-4">
-                <div className="text-lg font-bold text-gray-900">Pro Plan</div>
-                <div className="bg-gray-100 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">
+                <div className="text-lg font-bold font-inter text-gray-900">Pro Plan</div>
+                <div className="bg-gray-100 text-gray-900 text-xs font-semibold font-inter px-3 py-1 rounded-full">
                   Beta
                 </div>
               </div>
@@ -1277,13 +1279,13 @@ export default function Home() {
                 href="https://wa.me/31622253931?text=Hey%20Sam%2C%20I%20would%20love%20to%20be%20a%20beta%20tester%20for%20Adnosaur.%20Are%20there%20any%20spots%20left%3F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors mb-6 text-center"
+                className="block w-full bg-gray-100 hover:bg-[#8fff87] text-gray-900 font-semibold py-3 px-6 rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Send us a message
               </a>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1298,12 +1300,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-sm text-gray-700">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Everything in the Basic plan
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1318,12 +1320,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Unlimited credits & stores connected
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1338,10 +1340,10 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">200 AI credits</span>
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">200 AI credits</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1356,12 +1358,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     AI-generated product pages (1 credit per product page)
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1376,12 +1378,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     AI-generated branded product images (5 credit per image)
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1396,12 +1398,12 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     AI-generated branded product videos (10 credits per video)
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -1416,7 +1418,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[15px] md:text-sm text-gray-600">
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
                     Auto-push products
                   </span>
                 </li>
@@ -1427,26 +1429,23 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-12 md:py-20 px-4 bg-transparent">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-[2rem] md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 md:mb-12 text-center px-2">
+  <section id="faq" className="py-12 md:py-20 px-4 bg-transparent font-inter">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-[2rem] md:text-3xl lg:text-[45px] font-normal text-gray-900 mb-8 md:mb-12 text-center px-2 font-polysans">
             Frequently asked questions
           </h2>
 
           <div className="space-y-3 md:space-y-4 bg-white border-white rounded-xl md:rounded-2xl p-4 md:p-6">
             <details className="border-b border-gray-200 pb-3 md:pb-4 group">
               <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
+                <span className="faq-toggle text-[#b2b2b2] text-2xl md:text-3xl font-semibold flex-shrink-0 leading-none font-open-sans">
                   +
-                </span>
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
-                  ×
                 </span>
                 <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   How does Adnosaur save me time and money?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
+              <div className="faq-answer mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-[#666] text-[15px] md:text-[16px] leading-[24px]">
                 Adnosaur is essentially the Facebook ads library on steroids.
                 You can filter all ads, see all competitor stores for each
                 product, and easily list the products you want to sell in your
@@ -1456,17 +1455,14 @@ export default function Home() {
 
             <details className="border-b border-gray-200 pb-3 md:pb-4 group">
               <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
+                <span className="faq-toggle text-gray-400 text-2xl md:text-3xl font-semibold flex-shrink-0 leading-none font-open-sans">
                   +
-                </span>
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
-                  ×
                 </span>
                 <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   How can I find the best products to sell?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
+              <div className="faq-answer mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-[#666] text-[16px] md:text-[16px] leading-[24px]">
                 <p className="mb-2">
                   Watch this video to get started:
                   https://www.youtube.com/watch?v=2JxBEhrkVWQ
@@ -1480,17 +1476,14 @@ export default function Home() {
 
             <details className="border-b border-gray-200 pb-3 md:pb-4 group">
               <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
+                <span className="faq-toggle text-gray-400 text-2xl md:text-3xl flex-shrink-0 leading-none font-open-sans font-semibold">
                   +
-                </span>
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
-                  ×
                 </span>
                 <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   How can I estimate the saturation of a product?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
+              <div className="faq-answer mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-[#666] text-[15px] md:text-[16px] leading-relaxed">
                 Use our saturation analysis tools to see how many competitors
                 are selling similar products and evaluate market opportunities.
               </div>
@@ -1498,17 +1491,14 @@ export default function Home() {
 
             <details className="border-b border-gray-200 pb-3 md:pb-4 group">
               <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
+                <span className="faq-toggle text-gray-400 text-2xl md:text-3xl flex-shrink-0 leading-none font-open-sans font-semibold">
                   +
-                </span>
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
-                  ×
                 </span>
                 <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   Why does Adnosaur focus on fashion only?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
+              <div className="faq-answer mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-[#666] text-[15px] md:text-[16px] leading-relaxed">
                 Fashion is one of the largest and most dynamic eCommerce
                 categories. By specializing in fashion, we can provide more
                 accurate data and better insights specific to this market.
@@ -1517,17 +1507,14 @@ export default function Home() {
 
             <details className="border-b border-gray-200 pb-3 md:pb-4 group">
               <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
+                <span className="faq-toggle text-gray-400 text-2xl md:text-3xl flex-shrink-0 leading-none font-open-sans font-semibold">
                   +
-                </span>
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
-                  ×
                 </span>
                 <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   What is unique about Adnosaur?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
+              <div className="faq-answer mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-[#666] text-[15px] md:text-[16px] leading-relaxed">
                 Adnosaur combines powerful ad tracking, competitor analysis, and
                 product research tools in one platform, specifically optimized
                 for fashion products.
@@ -1536,17 +1523,14 @@ export default function Home() {
 
             <details className="pb-4 group">
               <summary className="flex items-start gap-2 md:gap-4 cursor-pointer list-none">
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 group-open:hidden leading-none">
+                <span className="faq-toggle text-gray-400 text-2xl md:text-3xl flex-shrink-0 leading-none font-open-sans font-semibold">
                   +
-                </span>
-                <span className="text-gray-400 text-2xl md:text-3xl flex-shrink-0 hidden group-open:inline leading-none">
-                  ×
                 </span>
                 <span className="flex-1 font-semibold text-gray-900 text-[17px] md:text-base">
                   Why won't we add Pinterest and TikTok?
                 </span>
               </summary>
-              <div className="mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-gray-500 text-[15px] md:text-sm leading-relaxed">
+              <div className="faq-answer mt-2 md:mt-3 ml-8 md:ml-12 font-bold text-[#666] text-[15px] md:text-[16px] leading-relaxed">
                 We focus on Facebook ads because they provide the most
                 comprehensive data and are the primary advertising platform for
                 fashion products. This allows us to deliver higher quality
