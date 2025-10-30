@@ -41,7 +41,7 @@ export default function StatsCounters({ stats }: { stats: Stat[] }) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {stats.map((s, idx) => (
           <div key={s.id}>
-            <div className="text-4xl md:text-4xl font-bold text-gray-900 font-geist-mono">
+            <div className="text-3xl md:text-4xl font-bold text-gray-900 font-geist-mono">
               <span>{format(counts[idx])}</span>
               <span aria-hidden className="ml-1" style={{ color: "#bfbfbd" }}>+</span>
             </div>

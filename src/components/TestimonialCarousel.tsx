@@ -89,7 +89,7 @@ export default function TestimonialCarousel({
                 {/* Testimonial Content */}
                 <div className="flex-1 relative max-w-[420px] md:max-w-[360px] lg:max-w-none">
                   <div className="space-y-6">
-                    <p className="text-black font-medium text-base leading-relaxed font-geist">
+                    <p className="text-[rgb(36,36,36)] md:text-black font-medium text-[14px] md:text-base leading-relaxed font-geist">
                       {testimonial.quote}
                     </p>
 

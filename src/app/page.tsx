@@ -103,7 +103,7 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen">
-  <section className="relative  md:py-10  md:text-white overflow-visible flex items-center justify-center min-h-[90vh] py-0">
+  <section className="relative md:py-10 md:text-white overflow-visible flex items-start md:items-center justify-center min-h-[90vh] py-0">
         <div className="max-w-[1200px] w-full px-6">
           {/* Contained card with rounded corners */}
           <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none py-12">
@@ -258,9 +258,10 @@ export default function Home() {
                 alt="After - Total sales €247,058"
                 className="w-[100%] mx-auto h-auto rounded-xl"
               />
-              {/* Shopify-style animated notifications overlay */}
-              <AnimatedNotifications side="left" className="scale-75" />
+             
             </div>
+             {/* Shopify-style animated notifications overlay */}
+              <AnimatedNotifications side="left" className="scale-75" />
           </div>
         </div>
       </section>
@@ -277,10 +278,10 @@ export default function Home() {
       {/* Product Research Method Section */}
       <section className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
         <div className="max-w-3xl md:max-w-4xl lg:max-w-6xl mx-auto text-center">
-          <h2 className="text-[1.7rem]  md:text-[45px] font-bold text-gray-900 mb-4 md:leading-[54px] leading-10">
+          <h2 className="text-[25px] leading-[30px]  md:text-[45px] font-bold text-gray-900 mb-4 md:leading-[54px] leading-10">
             Your product research method
             <br />
-            is losing you{" "}
+            is losing you{" "}<br className="md:hidden" />
             <span className="text-[#bfbfbd]">time and money.</span>
           </h2>
           <p className="text-[#909293] text-[16px] max-w-[765px] font-normal mx-auto mb-15 font-geist">
@@ -315,17 +316,17 @@ export default function Home() {
             className="mt-12 max-w-[960px] w-full mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden"
           />
 
-          <div className="text-center mt-12 mb-8">
+          <div className="text-center mt-12 mb-0 md:mb-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="https://trial.adnosaur.com/"
-                className="inline-block bg-primary hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors"
+                className="inline-block bg-primary max-sm:w-full hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors"
               >
                 Find unsaturated fashion winners now
               </Link>
               <Link
                 href="https://trial.adnosaur.com/"
-                className="inline-block border-1 border-gray-300 hover:border-gray-500bg-transparent text-gray-700 font-medium py-4 px-8 rounded-2xl transition-colors"
+                className="inline-block border-1 max-sm:w-full border-gray-300 hover:border-gray-500bg-transparent text-gray-700 font-medium py-4 px-8 rounded-2xl transition-colors"
               >
                 Try for free{" "}
                 <span className="text-gray-400">- No login required</span>
@@ -382,7 +383,7 @@ export default function Home() {
       {/* Features Comparison Table */}
       <section className="py-12 md:py-20 px-2 md:px-4 bg-transparent overflow-x-hidden">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[2.5rem] md:text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-8 md:mb-12 px-4">
+          <h2 className="text-[25px] max-sm:[leading-30px] md:text-4xl lg:text-5xl text-center font-bold text-gray-900 mb-8 md:mb-12 px-4">
             Features that <span className="text-gray-400">set us apart</span>
           </h2>
 
@@ -699,7 +700,7 @@ export default function Home() {
                 <div className="font-semibold text-sm text-gray-900 mb-1">
                   Product focused approach
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className=" text-[14px] md:text-[11px] font-inter text-black mb-3">
                   See all competitors for each product
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -722,7 +723,7 @@ export default function Home() {
                 <div className="font-semibold text-sm text-gray-900 mb-1">
                   Focus
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className=" text-[14px] md:text-[11px] font-inter text-black mb-3">
                   Only focuses on one specific niche and platform.
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -745,7 +746,7 @@ export default function Home() {
                 <div className="font-semibold text-sm text-gray-900 mb-1">
                   Fair pricing
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className="text-[14px] font-inter md:text-[11px] text-black mb-3">
                   Don&apos;t work with coaches who take 50% affiliate fee.
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -768,7 +769,7 @@ export default function Home() {
                 <div className="font-semibold text-sm text-gray-900 mb-1">
                   Protection against saturation
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className=" text-[14px] font-inter  md:text-[11px] text-black mb-3">
                   Only work with a limited number of dropshippers.
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -796,7 +797,7 @@ export default function Home() {
                     BETA
                   </span>
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className="text-[14px] font-inter md:text-[11px] text-black mb-3">
                   Replace your product lister with better quality AI listings.
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -825,7 +826,7 @@ export default function Home() {
                     BETA
                   </span>
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className="text-[14px] font-inter md:text-[11px] text-black mb-3">
                   Brand your store with AI fashion models.
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -854,7 +855,7 @@ export default function Home() {
                     BETA
                   </span>
                 </div>
-                <div className="text-[11px] text-gray-400 mb-3">
+                <div className="text-[14px] font-inter md:text-[11px] text-black mb-3">
                   Brand your store with AI fashion videos.
                 </div>
                 <div className="grid grid-cols-3 gap-3">
@@ -877,11 +878,11 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[2rem] md:text-3xl lg:text-[45px] leading-[54px] font-normal text-gray-900 mb-3 md:mb-4 text-center">
+          <h2 className="text-[25px] md:text-3xl lg:text-[45px] leading-[30px] md:leading-[54px] font-normal text-gray-900 mb-3 md:mb-4 text-center">
             Lock in your seat for a{" "}
             <span className="text-gray-400">fair price</span>
           </h2>
-          <p className="text-[17px] md:text-[18px] text-[#2424248c] text-center max-w-[780px] mx-auto mb-8 md:mb-12 px-2 font-geist">
+          <p className="text-[17px]  md:text-[18px] text-[#2424248c] text-center max-w-[780px] mx-auto mb-8 md:mb-12 px-2 font-geist">
             Product research tools lose their edge when used by everybody.
             Therefore, we will only allow 500 dropshippers to work with us. Lock
             in your seat now with up to <span className="font-bold inline text-[#2424248c]">80% discount!</span>

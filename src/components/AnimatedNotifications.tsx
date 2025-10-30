@@ -91,6 +91,9 @@ export default function AnimatedNotifications({
 	}, [FADE_OUT_DURATION, HOLD_DURATION, RESTART_DELAY, SLIDE_IN_DURATION, totalGroups]);
 
 	const isLeft = side === "left";
+	const positionClasses = isLeft
+		? "[right:-4.5rem] left-auto sm:left-4 sm:right-auto"
+		: "[right:-4.5rem] left-auto sm:right-4";
 
 	const phaseVisibility: Record<Phase, number> = {
 		off: 0,
@@ -140,7 +143,7 @@ export default function AnimatedNotifications({
 
 	return (
 		<div
-			className={`absolute top-4 ${isLeft ? "left-4" : "-right-23"} max-sm:-right-150 max-sm:-top-1 space-y-2 z-10 ${className}`}
+			className={`absolute top-4 ${positionClasses} max-sm:-top-1 space-y-2 z-10 ${className}`}
 		>
 			{currentNotifications.map((notification, index) => {
 				const { isActive, isFading } = getVisibilityState(index);
