@@ -104,11 +104,11 @@ export default function Home() {
   return (
     <div className="min-h-screen">
   <section className="relative  md:py-10  md:text-white overflow-visible flex items-center justify-center min-h-[90vh] py-0">
-        <div className="max-w-[1200px] w-full px-6">
+        <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6">
           {/* Contained card with rounded corners */}
-          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none py-0 ">
+          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none  max-[400px]:py-30 ">
             <div className="text-center relative z-10">
-              <h1 className="text-[27px] md:text-4xl lg:text-[52px] font-bold leading-[32px] mb-6 md:leading-[62.4px] text-gray-900 md:text-white w-full max-w-4xl ">
+              <h1 className=" text-[27px] md:text-4xl lg:text-[52px] font-bold leading-[32px] mb-6 md:leading-[62.4px] text-gray-900 md:text-white w-full max-w-4xl ">
                 Find and list unsaturated{" "}
                 <span className=" text-[#0fb004] md:text-[#8fff87] ">
                   winning fashion products
