@@ -91,9 +91,9 @@ export default function AnimatedNotifications({
 	}, [FADE_OUT_DURATION, HOLD_DURATION, RESTART_DELAY, SLIDE_IN_DURATION, totalGroups]);
 
 	const isLeft = side === "left";
-	const positionClasses = isLeft
+const positionClasses = isLeft
 		? "[right:-4.5rem] left-auto sm:left-4 sm:right-auto"
-		: "[right:-4.5rem] left-auto sm:right-4";
+		: "[right:-4.5rem] left-auto sm:right-4 lg:-right-20";
 
 	const phaseVisibility: Record<Phase, number> = {
 		off: 0,

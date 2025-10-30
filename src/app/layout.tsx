@@ -35,7 +35,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <main className="min-h-screen pt-20">{children}</main>
+        <main className="min-h-screen pt-0  md:pt-20">{children}</main>
         <Footer />
         <FloatingNotification />
         <WhatsAppFloat />
