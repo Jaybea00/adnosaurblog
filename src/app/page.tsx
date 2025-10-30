@@ -878,11 +878,11 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-12 md:py-20 px-4 bg-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[25px] md:text-3xl lg:text-[45px] leading-[30px] md:leading-[54px] font-normal text-gray-900 mb-3 md:mb-4 text-center">
+          <h2 className="text-[26px]  md:text-3xl lg:text-[45px] leading-[30px] md:leading-[54px]  text-gray-900 mb-3 font-polysans-media md:mb-4 text-center font-bold">
             Lock in your seat for a{" "}
             <span className="text-gray-400">fair price</span>
           </h2>
-          <p className="text-[17px]  md:text-[18px] text-[#2424248c] text-center max-w-[780px] mx-auto mb-8 md:mb-12 px-2 font-geist">
+          <p className="text-[18px]  md:text-[18px] text-[#2424248c] text-center max-w-[780px] mx-auto mb-8 md:mb-12 px-2 font-geist">
             Product research tools lose their edge when used by everybody.
             Therefore, we will only allow 500 dropshippers to work with us. Lock
             in your seat now with up to <span className="font-bold inline text-[#2424248c]">80% discount!</span>
@@ -1432,7 +1432,7 @@ export default function Home() {
       {/* FAQ Section */}
   <section id="faq" className="py-12 md:py-20 px-4 bg-transparent font-inter">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[1.5rem] md:text-3xl lg:text-[45px] font-normal text-gray-900 mb-8 md:mb-12 text-center px-2 font-polysans">
+          <h2 className="text-[1.5rem] md:text-3xl lg:text-[45px] font-bold text-gray-900 mb-8 md:mb-12 text-center px-2 font-polysans-media">
             Frequently asked questions
           </h2>
 
