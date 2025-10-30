@@ -7,9 +7,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="header-slide-in fixed top-9 left-0 right-0 z-50 px-4 font-polysans-media">
-      <nav className="w-full max-w-full sm:max-w-[350px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full shadow-lg">
-        <div className="flex justify-between items-center h-14 md:pl-3 md:pr-3 px-4 md:px-6 py-6">
+    <header className="header-slide-in fixed top-4 sm:top-6 md:top-9 left-0 right-0 z-50 px-4 font-polysans-media">
+    <nav className="w-full max-w-[320px] sm:max-w-[360px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full ">
+      <div className="flex justify-between items-center md:pl-3 md:pr-3 px-4 md:px-6 py-2 sm:py-3 md:py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img

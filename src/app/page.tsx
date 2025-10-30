@@ -103,10 +103,10 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen">
-  <section className="relative  md:py-10  md:text-white overflow-visible flex items-center justify-center min-h-[90vh] py-0">
+  <section className="relative md:text-white overflow-visible flex items-center justify-center md:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-12 pb-0 md:pb-10">
         <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6">
           {/* Contained card with rounded corners */}
-          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-8 md:pb-90 relative overflow-hidden md:shadow-none  max-[400px]:py-30 ">
+          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-0 md:pb-90 relative overflow-hidden md:shadow-none  max-[400px]:pt-4 max-[400px]:pb-4 ">
             <div className="text-center relative z-10">
               <h1 className=" text-[27px] md:text-4xl lg:text-[52px] font-bold leading-[32px] mb-6 md:leading-[62.4px] text-gray-900 md:text-white w-full max-w-4xl ">
                 Find and list unsaturated{" "}
@@ -177,7 +177,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-0 md:mb-10">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-4 min-[350px]:mb-6 min-[400px]:mb-8 md:mb-10">
                 <Link
                   href="https://trial.adnosaur.com/"
                   className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl md:rounded-2xl transition-colors text-[15px] md:text-[15px] w-full md:w-auto"
@@ -1432,7 +1432,7 @@ export default function Home() {
       {/* FAQ Section */}
   <section id="faq" className="py-12 md:py-20 px-4 bg-transparent font-inter">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[2rem] md:text-3xl lg:text-[45px] font-normal text-gray-900 mb-8 md:mb-12 text-center px-2 font-polysans">
+          <h2 className="text-[1.5rem] md:text-3xl lg:text-[45px] font-normal text-gray-900 mb-8 md:mb-12 text-center px-2 font-polysans">
             Frequently asked questions
           </h2>
 
