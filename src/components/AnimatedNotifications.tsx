@@ -92,7 +92,7 @@ export default function AnimatedNotifications({
 
 	const isLeft = side === "left";
 const positionClasses = isLeft
-		? "[right:-4.5rem] left-auto sm:left-4 sm:right-auto"
+		? "[right:-3.5rem] left-auto sm:left-4 sm:right-auto"
 		: "[right:-4.5rem] left-auto sm:right-4 lg:-right-20";
 
 	const phaseVisibility: Record<Phase, number> = {

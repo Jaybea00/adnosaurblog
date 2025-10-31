@@ -102,7 +102,7 @@ const InfoBadge = ({
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
   <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10">
         <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6">
           {/* Contained card with rounded corners */}
@@ -180,7 +180,7 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row gap-5 justify-center items-center mb-4 min-[350px]:mb-6 min-[400px]:mb-8 lg:mb-10">
                 <Link
                   href="https://trial.adnosaur.com/"
-                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto max-[376px]:px-4"
                 >
                   Find unsaturated fashion winners now
                 </Link>
@@ -320,7 +320,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="https://trial.adnosaur.com/"
-                className="inline-block bg-primary max-sm:w-full hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors"
+                className="inline-block bg-primary max-sm:w-full hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors max-[376px]:px-4"
               >
                 Find unsaturated fashion winners now
               </Link>
@@ -339,7 +339,7 @@ export default function Home() {
       {/* Competitors Section */}
       <section className="py-20 px-4 bg-transparent">
         <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
-          <h2 className="text-2xl min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-bold text-gray-900 mb-4 text-center leading-10">
+          <h2 className="text-2xl min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-bold text-gray-900 mb-4 text-center leading-10 max-[376px]:text-[20px] max-[376px]:leading-[25px]">
             Your smartest competitors are
             <br />
             already using <span className="text-[#949494]">Adnosaur!</span>
