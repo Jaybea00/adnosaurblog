@@ -11,7 +11,7 @@ export default function WhatsAppFloat() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed max-sm:hidden bottom-6 right-6 z-50">
       <button
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
