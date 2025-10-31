@@ -8,8 +8,8 @@ export default function Header() {
 
   return (
     <header className="header-slide-in fixed top-4 sm:top-6 md:top-9 left-0 right-0 z-50 px-4 font-polysans-media">
-    <nav className="w-full max-w-[320px] sm:max-w-[360px] md:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full ">
-      <div className="flex justify-between items-center md:pl-3 md:pr-3 px-4 md:px-6 py-2 sm:py-3 md:py-2">
+  <nav className="w-full max-w-[320px] sm:max-w-[360px] md:max-w-full lg:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full ">
+        <div className="flex justify-between items-center lg:pl-3 lg:pr-3 px-4 lg:px-6 py-2 sm:py-3 lg:py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img
@@ -20,7 +20,7 @@ export default function Header() {
           </Link>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <Link
               href="/blog"
               className="text-[16px] text-white hover:text-primary transition-colors font-semibold"
@@ -48,7 +48,7 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons - Desktop */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3">
             <Link
               href="https://app.adnosaur.com/login/"
               className="text-sm md:text-[16px] text-white hover:text-white hover:bg-gray-600 transition-all font-semibold border border-white hover:border-transparent rounded-full px-4 py-2"
@@ -66,7 +66,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-primary p-2 relative w-10 h-10 flex items-center justify-center"
+          className="lg:hidden text-white hover:text-primary p-2 relative w-10 h-10 flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,7 +95,7 @@ export default function Header() {
 
         {/* Mobile Menu Dropdown */}
         <div
-          className={`md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-navbar border border-gray-700 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 origin-top ${
+          className={`lg:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-navbar border border-gray-700 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 origin-top ${
             mobileMenuOpen
               ? "opacity-100 scale-y-100 translate-y-0"
               : "opacity-0 scale-y-0 -translate-y-4 pointer-events-none"

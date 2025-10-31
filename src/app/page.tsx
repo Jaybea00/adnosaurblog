@@ -103,25 +103,25 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen">
-  <section className="relative md:text-white overflow-visible flex items-center justify-center md:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-12 pb-0 md:pb-10">
+  <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10">
         <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6">
           {/* Contained card with rounded corners */}
-          <div className="bg-transparent md:bg-[#1a1a1a] rounded-[2.5rem]  p-2 md:py-[80px] md:px-[90px] pb-0 md:pb-90 relative overflow-hidden md:shadow-none  max-[400px]:pt-4 max-[400px]:pb-4 ">
+          <div className="bg-transparent lg:bg-[#1a1a1a] rounded-[2.5rem] p-2 lg:py-[80px] lg:px-[90px] pb-0 lg:pb-90 relative overflow-hidden lg:shadow-none max-[400px]:pt-4 max-[400px]:pb-4 ">
             <div className="text-center relative z-10">
-              <h1 className=" text-[27px] md:text-4xl lg:text-[52px] font-bold leading-[32px] mb-6 md:leading-[62.4px] text-gray-900 md:text-white w-full max-w-4xl ">
+              <h1 className=" text-[27px] lg:text-[52px] font-bold leading-[32px] mb-6 lg:leading-[62.4px] text-gray-900 lg:text-white w-full max-w-4xl ">
                 Find and list unsaturated{" "}
-                <span className=" text-[#0fb004] md:text-[#8fff87] ">
+                <span className=" text-[#0fb004] lg:text-[#8fff87] ">
                   winning fashion products
-                </span>{" "}<br className="md:hidden" />
+                </span>{" "}<br className="lg:hidden" />
                  in seconds.
               </h1>
 
-              <p className="text-base md:text-[16px] text-gray-600 md:text-[#a7a5a7] md:font-normal mb-8 max-w-4xl mx-auto font-geist">
+              <p className="text-base lg:text-[16px] text-gray-600 lg:text-[#a7a5a7] lg:font-normal mb-8 max-w-4xl mx-auto font-geist">
                 Increase your winning product rate up to 31%* — without wasting
                 time and money testing saturated products.
               </p>
 
-              <div className="space-y-3 mb-8 max-w-2xl mx-auto md:text-center text-left md:max-w-xl text-[14px] md:text-[14px] font-inter">
+              <div className="space-y-3 mb-8 max-w-2xl mx-auto lg:text-center text-left lg:max-w-xl text-[14px] font-inter">
                 <div className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 text-primary mt-1 flex-shrink-0"
@@ -134,7 +134,7 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-gray-900 md:text-white font-inter">
+                  <p className="text-gray-900 lg:text-white font-inter">
                     <span className="font-semibold font-inter">
                       Copy product listings:
                     </span>{" "}
@@ -153,7 +153,7 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-gray-900 md:text-white font-inter">
+                  <p className="text-gray-900 lg:text-white font-inter">
                     <span className="font-semibold font-inter">Hand-picked winners:</span>{" "}
                     Get products matched directly to your niche and country.
                   </p>
@@ -170,27 +170,27 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-gray-900 md:text-white font-inter">
+                  <p className="text-gray-900 lg:text-white font-inter">
                     <span className="font-semibold font-inter">Limited to 500 users:</span>{" "}
                     Keeping products unsaturated and profits high.
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-4 min-[350px]:mb-6 min-[400px]:mb-8 md:mb-10">
+              <div className="flex flex-col lg:flex-row gap-5 justify-center items-center mb-4 min-[350px]:mb-6 min-[400px]:mb-8 lg:mb-10">
                 <Link
                   href="https://trial.adnosaur.com/"
-                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl md:rounded-2xl transition-colors text-[15px] md:text-[15px] w-full md:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto"
                 >
                   Find unsaturated fashion winners now
                 </Link>
-                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 md:bg-transparent md:border-white/30 md:text-white md:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl md:rounded-2xl transition-colors text-[15px] md:text-[15px] w-full md:w-auto">
+                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 lg:bg-transparent lg:border-white/30 lg:text-white lg:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto">
                   See how it works
                 </button>
               </div>
 
               {/* Stats Cards with Images - Positioned at bottom edge */}
-              <div className="absolute left-4 right-4 md:left-12 md:right-12 -bottom-20 md:-bottom-115 hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 perspective-1000">
+              <div className="absolute left-4 right-4 lg:left-12 lg:right-12 -bottom-20 lg:-bottom-115 hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-2 perspective-1000">
                 {/* Before Card */}
                 <div className="relative transform md:-rotate-3 transition-transform duration-300 md:scale-x-90">
                   <div
@@ -232,8 +232,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mobile-only Before/After cards (appear after hero). Desktop remains unchanged */}
-      <section className="md:hidden px-6 py-0 mb-20">
+      {/* Mobile & Tablet Before/After cards (appear after hero). Desktop remains unchanged */}
+      <section className="lg:hidden px-6 py-0 mb-20">
         <div className="space-y-8 max-w-[300px] mx-auto">
           {/* Before Card */}
           <div className="relative bg-white border border-gray-200 rounded-2xl shadow-sm p-3">
@@ -261,7 +261,7 @@ export default function Home() {
              
             </div>
              {/* Shopify-style animated notifications overlay */}
-              <AnimatedNotifications side="left" className="scale-75" />
+              <AnimatedNotifications side="left" className="scale-75 md:left-auto md:-right-16" />
           </div>
         </div>
       </section>
@@ -278,7 +278,7 @@ export default function Home() {
       {/* Product Research Method Section */}
       <section className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
         <div className="max-w-3xl md:max-w-4xl lg:max-w-6xl mx-auto text-center">
-          <h2 className="text-[25px] leading-[30px]  md:text-[45px] font-bold text-gray-900 mb-4 md:leading-[54px] leading-10">
+          <h2 className="text-[25px] leading-[30px] min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-bold text-gray-900 mb-4 leading-10">
             Your product research method
             <br />
             is losing you{" "}<br className="md:hidden" />
@@ -301,7 +301,7 @@ export default function Home() {
       {/* Video Section */}
   <section className="px-4 bg-gray-50 font-polysans">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-[45px] font-semibold  text-gray-900 mb-4 text-center md:leading-[54px] leading:9">
+          <h2 className="text-2xl min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-semibold  text-gray-900 mb-4 text-center leading:9 ">
             Watch how Adnosaur helps you find{" "}
             <br className="hidden md:block" />
             <span className="text-[#949494]">
@@ -313,7 +313,7 @@ export default function Home() {
           <VideoOnScroll
             videoId="3sqzo_CmXWM"
             title="Adnosaur Demo"
-            className="mt-12 max-w-[960px] w-full mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden"
+            className="mt-12 max-w-[960px] w-full mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden md:max-w-[720px] lg:max-w-[960px]"
           />
 
           <div className="text-center mt-12 mb-0 md:mb-8">
@@ -339,7 +339,7 @@ export default function Home() {
       {/* Competitors Section */}
       <section className="py-20 px-4 bg-transparent">
         <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-[45px] font-bold text-gray-900 mb-4 text-center md:leading-[54px] leading-10">
+          <h2 className="text-2xl min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-bold text-gray-900 mb-4 text-center leading-10">
             Your smartest competitors are
             <br />
             already using <span className="text-[#949494]">Adnosaur!</span>
@@ -388,7 +388,7 @@ export default function Home() {
           </h2>
 
           {/* Desktop Table View */}
-          <div className="hidden md:block bg-white rounded-xl md:rounded-2xl overflow-visible">
+          <div className="hidden lg:block bg-white rounded-xl md:rounded-2xl overflow-visible">
             <div className="overflow-x-auto md:overflow-visible">
               <table className="w-full min-w-[600px]">
                 <thead className="rounded-full font-roboto">
@@ -617,8 +617,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Mobile Card View */}
-          <div className="md:hidden space-y-3 px-2">
+          {/* Mobile & Tablet Card View */}
+          <div className="lg:hidden space-y-3 px-2">
             {/* Header Card */}
             <div className="bg-white rounded-xl overflow-hidden">
               <div className="grid grid-cols-3 text-center">
@@ -888,7 +888,7 @@ export default function Home() {
             in your seat now with up to <span className="font-bold inline text-[#2424248c]">80% discount!</span>
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Starter Plan */}
             <div className="bg-transparent border border-gray-200 rounded-2xl p-6 md:p-8">
               <div className="text-[22px] md:text-lg font-bold text-gray-900 mb-4 font-inter">

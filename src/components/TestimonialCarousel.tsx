@@ -55,7 +55,7 @@ export default function TestimonialCarousel({
   };
 
   return (
-  <div className="mt-12 relative max-w-[320px] md:max-w-2xl lg:max-w-3xl mx-auto">
+  <div className="mt-12 relative max-w-[320px] md:max-w-2xl lg:max-w-3xl mx-auto font-geist">
     <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-sm overflow-hidden">
         <div
           className="relative overflow-hidden transition-[height] duration-300"
@@ -87,9 +87,9 @@ export default function TestimonialCarousel({
                 </div>
 
                 {/* Testimonial Content */}
-                <div className="flex-1 relative max-w-[420px] md:max-w-[360px] lg:max-w-none">
+                <div className="flex-1 relative font-roboto max-w-[420px] md:max-w-[360px] lg:max-w-none">
                   <div className="space-y-6">
-                    <p className="text-[rgb(36,36,36)] md:text-black font-medium text-[14px] md:text-base leading-relaxed font-geist">
+                    <p className="text-black font-medium text-base font-geist leading-relaxed">
                       {testimonial.quote}
                     </p>
 
@@ -102,10 +102,10 @@ export default function TestimonialCarousel({
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <div className="font-bold text-gray-900 text-lg font-inter">
+                        <div className="font-bold font-inter text-gray-900 text-lg">
                           {testimonial.name}
                         </div>
-                        <div className="text-[16px] text-[#919191] font-inter">
+                        <div className="text-sm font-inter text-gray-500">
                           {testimonial.title}
                         </div>
                       </div>
