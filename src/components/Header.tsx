@@ -7,7 +7,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="header-slide-in fixed top-4 sm:top-6 md:top-9 left-0 right-0 z-50 px-4 font-polysans-media">
+    <header className="header-slide-in fixed top-4 sm:top-6 md:top-9 left-0 right-0 z-50 px-4 font-polysans-media ">
   <nav className="w-full max-w-[320px] sm:max-w-[360px] md:max-w-full lg:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full ">
         <div className="flex justify-between items-center lg:pl-3 lg:pr-3 px-4 lg:px-6 py-2 sm:py-3 lg:py-2">
           {/* Logo */}
@@ -51,12 +51,16 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3">
             <Link
               href="https://app.adnosaur.com/login/"
+              target="_blank"
+  rel="noopener noreferrer"
               className="text-sm md:text-[16px] text-white hover:text-white hover:bg-gray-600 transition-all font-semibold border border-white hover:border-transparent rounded-full px-4 py-2"
             >
               Log in
             </Link>
             <Link
               href="https://trial.adnosaur.com/"
+              target="_blank"
+  rel="noopener noreferrer"
               className="bg-primary text-sm md:text-[16px] font-semibold py-2 px-5 rounded-full"
             >
               <span>Try out - </span>
@@ -133,6 +137,8 @@ export default function Header() {
               <div className="border-t border-gray-700 my-2"></div>
               <Link
                 href="https://app.adnosaur.com/login/"
+                target="_blank"
+  rel="noopener noreferrer"
                 className="mx-6 my-2 text-center text-sm text-white hover:bg-gray-600 transition-all font-bold border border-white rounded-full px-4 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -140,6 +146,8 @@ export default function Header() {
               </Link>
               <Link
                 href="https://trial.adnosaur.com/"
+                target="_blank"
+  rel="noopener noreferrer"
                 className="mx-6 my-2 text-center bg-primary text-sm font-bold py-2 px-5 rounded-full"
                 onClick={() => setMobileMenuOpen(false)}
               >

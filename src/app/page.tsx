@@ -103,8 +103,8 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-  <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10">
-        <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6">
+  <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10 ">
+        <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6 [@media(min-width:640px)_and_(max-width:767px)]:pt-[2rem]">
           {/* Contained card with rounded corners */}
           <div className="bg-transparent lg:bg-[#1a1a1a] rounded-[2.5rem] p-2 lg:py-[80px] lg:px-[90px] pb-0 lg:pb-90 relative overflow-hidden lg:shadow-none max-[400px]:pt-4 max-[400px]:pb-4 ">
             <div className="text-center relative z-10">
@@ -179,14 +179,14 @@ export default function Home() {
 
               <div className="flex flex-col lg:flex-row gap-5 justify-center items-center mb-4 min-[350px]:mb-6 min-[400px]:mb-8 lg:mb-10">
                 <Link
-                  href="https://trial.adnosaur.com/"
+                  href="#pricing"
                   className="bg-primary hover:bg-primary/90 text-black font-bold py-4 px-7 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto max-[376px]:px-4"
                 >
                   Find unsaturated fashion winners now
                 </Link>
-                <button className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 lg:bg-transparent lg:border-white/30 lg:text-white lg:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto">
+                <Link href="#how-it-works" className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 lg:bg-transparent lg:border-white/30 lg:text-white lg:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto">
                   See how it works
-                </button>
+                </Link>
               </div>
 
               {/* Stats Cards with Images - Positioned at bottom edge */}
@@ -276,7 +276,7 @@ export default function Home() {
       />
 
       {/* Product Research Method Section */}
-      <section className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
+      <section id="how-it-works" className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
         <div className="max-w-3xl md:max-w-4xl lg:max-w-6xl mx-auto text-center">
           <h2 className="text-[25px] leading-[30px] min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-bold text-gray-900 mb-4 leading-10">
             Your product research method
@@ -319,13 +319,15 @@ export default function Home() {
           <div className="text-center mt-12 mb-0 md:mb-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="https://trial.adnosaur.com/"
+                href="#pricing"
                 className="inline-block bg-primary max-sm:w-full hover:bg-primary/90 text-black font-bold py-4 px-8 rounded-2xl transition-colors max-[376px]:px-4"
               >
                 Find unsaturated fashion winners now
               </Link>
               <Link
                 href="https://trial.adnosaur.com/"
+                target="_blank"
+  rel="noopener noreferrer"
                 className="inline-block border-1 max-sm:w-full border-gray-300 hover:border-gray-500bg-transparent text-gray-700 font-medium py-4 px-8 rounded-2xl transition-colors"
               >
                 Try for free{" "}
