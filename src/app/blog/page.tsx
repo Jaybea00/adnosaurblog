@@ -10,7 +10,7 @@ export default async function BlogPage() {
     <div className="min-h-screen">
       {/* Featured Post Section */}
       {featuredPost ? (
-        <section className="py-8 px-4">
+        <section className="py-8 px-4  [@media(min-width:360px)_and_(max-width:767px)]:mt-[3.5rem] md:mt-[1.5rem]">
           <div className="max-w-6xl mx-auto">
             <Suspense
               fallback={

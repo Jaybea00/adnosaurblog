@@ -22,7 +22,7 @@ export default async function PostPage({
   }
 
   return (
-    <article className="min-h-screen py-8 md:py-16 px-4">
+    <article className="min-h-screen py-[7rem] md:py-16 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Back Button */}
         <Link
