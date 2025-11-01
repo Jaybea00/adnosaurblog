@@ -902,12 +902,14 @@ export default function Home() {
                   from $49,99
                 </span>
               </div>
-              <a
+              <Link
                 href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9CwEsOdJ7C9r&amount=10"
+                 target="_blank"
+  rel="noopener noreferrer"
                 className="block w-full font-inter bg-gray-100 hover:bg-[#8fff87] text-gray-900 font-semibold font-inter py-3 px-6 rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Get started
-              </a>
+              </Link>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1120,12 +1122,14 @@ export default function Home() {
                   from $74,99
                 </span>
               </div>
-              <a
+              <Link
                 href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9EWjEjmIhmeO&amount=30"
+                 target="_blank"
+  rel="noopener noreferrer"
                 className="block w-full bg-primary hover:bg-[#8fff87] text-gray-900 font-semibold py-3 px-6 font-inter rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Get started
-              </a>
+              </Link>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1278,14 +1282,14 @@ export default function Home() {
                   from $99,99
                 </span>
               </div>
-              <a
+              <Link
                 href="https://wa.me/31622253931?text=Hey%20Sam%2C%20I%20would%20love%20to%20be%20a%20beta%20tester%20for%20Adnosaur.%20Are%20there%20any%20spots%20left%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-gray-100 hover:bg-[#8fff87] text-gray-900 font-semibold py-3 px-6 rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Send us a message
-              </a>
+              </Link>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
