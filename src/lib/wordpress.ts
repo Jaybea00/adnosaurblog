@@ -1,6 +1,6 @@
 import { Post, WordPressPost } from "@/types";
 
-const API_BASE_URL = "https://go.azfar.in/wp-json/wp/v2";
+const API_BASE_URL = "https://go.adnosaur.com/wp-json/wp/v2";
 
 // Helper function to strip HTML tags
 function stripHtml(html: string): string {
