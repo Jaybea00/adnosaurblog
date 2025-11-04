@@ -26,7 +26,7 @@ export default async function PostPage({
       <div className="max-w-2xl mx-auto">
         {/* Back Button */}
         <Link
-          href="/"
+          href="/blog"
           className="inline-flex items-center text-gray-600 hover:text-primary transition-colors mb-8 group"
         >
           <svg
@@ -167,7 +167,7 @@ export default async function PostPage({
         {/* Back to Blog Button */}
         <div className="mt-12 text-center">
           <Link
-            href="/"
+            href="/blog"
             className="inline-block bg-primary hover:bg-primary/90 text-gray-900 font-bold py-3 px-8 rounded-full transition-colors"
           >
             ← Back to All Posts
