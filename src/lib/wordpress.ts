@@ -42,6 +42,7 @@ export function transformWordPressPost(wpPost: any): Post {
       author: {
         name: author?.name || "Anonymous",
         avatar: avatarUrl,
+        bio: author?.description ? stripHtml(author.description) : undefined,
       },
       featuredImage:
         featuredMedia?.source_url ||

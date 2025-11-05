@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { decode } from "he";
 import { Post } from "@/types";
 
 interface PostCardProps {
@@ -6,6 +7,10 @@ interface PostCardProps {
 }
 
 export default function PostCard({ post }: PostCardProps) {
+  const decodedTitle = decode(post.title);
+  const decodedExcerpt = decode(post.excerpt);
+  const decodedAuthorName = decode(post.author.name);
+
   return (
     <article className="group cursor-pointer">
       <Link href={`/posts/${post.slug}`}>
@@ -24,12 +29,12 @@ export default function PostCard({ post }: PostCardProps) {
         <div>
           {/* Title */}
           <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
-            {post.title}
+            {decodedTitle}
           </h3>
 
           {/* Excerpt */}
           <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-            {post.excerpt}
+            {decodedExcerpt}
           </p>
 
           {/* Meta Info */}
@@ -43,7 +48,7 @@ export default function PostCard({ post }: PostCardProps) {
             )}
             <div className="flex items-center space-x-2 text-gray-500">
               <span className="font-medium text-gray-700">
-                {post.author.name}
+                {decodedAuthorName}
               </span>
               <span>•</span>
               <span>

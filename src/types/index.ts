@@ -8,6 +8,7 @@ export interface Post {
   author: {
     name: string;
     avatar?: string;
+    bio?: string;
   };
   date: string;
   categories: string[];
@@ -34,6 +35,7 @@ export interface WordPressPost {
       avatar_urls?: {
         96: string;
       };
+      description?: string;
     }>;
     "wp:featuredmedia"?: Array<{
       source_url: string;

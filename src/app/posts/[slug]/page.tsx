@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { decode } from "he";
 import { getPostBySlug } from "@/lib/wordpress";
 import ShareButtons from "@/components/ShareButtons";
 export default async function PostPage({
@@ -47,7 +48,7 @@ export default async function PostPage({
 
         {/* Featured Image */}
         {post.featuredImage && (
-          <div className="relative h-64 md:h-96 lg:h-[500px] mb-8 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative h-64 md:h-96 lg:h-[500px] mb-8 rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg -mx-2 md:-mx-12 lg:-mx-40">
             <img
               src={post.featuredImage}
               alt={post.title}
@@ -72,7 +73,7 @@ export default async function PostPage({
 
         {/* Title */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-          {post.title}
+          {decode(post.title)}
         </h1>
 
         {/* Meta Info */}
@@ -86,7 +87,7 @@ export default async function PostPage({
               />
             )}
             <span className="font-semibold text-gray-900">
-              {post.author.name}
+              {decode(post.author.name)}
             </span>
           </div>
           <span className="flex items-center">
@@ -137,11 +138,42 @@ export default async function PostPage({
           </div>
         )}
 
+        {/* Author Section */}
+        <section className="mt-16 relative overflow-hidden rounded-3xl border border-dark-tertiary bg-dark-secondary shadow-xl">
+          <div className="absolute inset-x-0 top-0 h-1 bg-primary" aria-hidden="true" />
+          <div className="relative p-8 md:p-10">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-500 mb-6">
+              About the author
+            </h2>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
+              {post.author.avatar && (
+                <div className="shrink-0">
+                  <img
+                    src={post.author.avatar}
+                    alt={post.author.name}
+                    className="w-24 h-24 rounded-3xl border-4 border-white shadow-[0_20px_40px_rgba(17,24,39,0.12)] object-cover"
+                  />
+                </div>
+              )}
+              <div className="text-center md:text-left">
+                <p className="text-2xl font-bold text-gray-900 mb-3">
+                  {decode(post.author.name)}
+                </p>
+                <p className="text-gray-600 leading-relaxed max-w-2xl">
+                  {decode(
+                    post.author.bio || "This author hasn't shared a bio yet."
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Share Section */}
-        <ShareButtons title={post.title} />
+        <ShareButtons title={decode(post.title)} />
 
         {/* Back to Blog Button */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center lg:text-left">
           <Link
             href="/blog"
             className="inline-block bg-primary hover:bg-primary/90 text-gray-900 font-bold py-3 px-8 rounded-full transition-colors"
