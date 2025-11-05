@@ -128,31 +128,7 @@ export default async function PostPage({
         {/* Content */}
         {post.content ? (
           <div
-            className="prose prose-lg max-w-none
-            prose-headings:text-gray-900 prose-headings:font-bold
-            prose-h1:text-3xl md:prose-h1:text-4xl prose-h1:mt-16 prose-h1:mb-8
-            prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-            prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-5
-            prose-h4:text-lg md:prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-4
-            prose-p:text-gray-700 prose-p:leading-[5.0] prose-p:mb-4 prose-p:text-base md:prose-p:text-lg
-            prose-p:border prose-p:border-red-500
-            prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-            prose-strong:text-gray-900 prose-strong:font-semibold
-            prose-em:text-gray-700 prose-em:italic
-            prose-code:text-primary prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
-            prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:border prose-pre:border-gray-700 prose-pre:rounded-lg prose-pre:p-6 prose-pre:my-8 prose-pre:overflow-x-auto
-            prose-ul:my-8 prose-ul:text-gray-700 prose-ul:list-disc prose-ul:pl-6
-            prose-ol:my-8 prose-ol:text-gray-700 prose-ol:list-decimal prose-ol:pl-6
-            prose-li:mb-3 prose-li:text-base md:prose-li:text-lg prose-li:leading-relaxed
-            prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:text-gray-700
-            prose-img:rounded-lg prose-img:shadow-lg prose-img:my-8 prose-img:mx-auto prose-img:max-w-full
-            prose-video:rounded-lg prose-video:shadow-lg prose-video:my-8 prose-video:mx-auto prose-video:max-w-full
-            prose-figure:my-8 prose-figure:mx-auto
-            prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-gray-600 prose-figcaption:mt-3 prose-figcaption:italic
-            prose-hr:my-12 prose-hr:border-gray-300
-            prose-table:my-8 prose-table:w-full
-            prose-th:bg-gray-100 prose-th:p-3 prose-th:text-left prose-th:font-semibold
-            prose-td:p-3 prose-td:border-t prose-td:border-gray-200"
+            className="prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         ) : (
