@@ -151,15 +151,15 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap gap-6">
               <Link
-                href="https://blog.adnosaur.com/privacy-statement-eu/"
-                 target="_blank"
-  rel="noopener noreferrer"
+                href="/privacy-policy"
+  //                target="_blank"
+  // rel="noopener noreferrer"
                 className="text-gray-800 hover:text-primary transition-colors underline"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="https://blog.adnosaur.com/terms-and-conditions"
+                href="/terms-and-conditions"
                  target="_blank"
   rel="noopener noreferrer"
                 className="text-gray-800 hover:text-primary transition-colors underline"

@@ -1,6 +1,7 @@
-import { Post, WordPressPost } from "@/types";
+import { PageEntry, Post, WordPressPage, WordPressPost } from "@/types";
 
 const API_BASE_URL = "https://go.azfar.in/wp-json/wp/v2";
+const PAGES_API_BASE_URL = "https://go.adnosaur.com/wp-json/wp/v2";
 
 // Helper function to strip HTML tags
 function stripHtml(html: string): string {
@@ -71,6 +72,17 @@ export function transformWordPressPost(wpPost: any): Post {
       readTime: "1 min read",
     };
   }
+}
+
+export function transformWordPressPage(wpPage: WordPressPage): PageEntry {
+  return {
+    id: wpPage.id,
+    slug: wpPage.slug,
+    title: wpPage.title?.rendered || "Untitled Page",
+    content: wpPage.content?.rendered || "",
+    excerpt: wpPage.excerpt?.rendered,
+    date: wpPage.date || new Date().toISOString(),
+  };
 }
 
 // Fetch all posts
@@ -175,6 +187,43 @@ export async function getFeaturedPost(): Promise<Post | null> {
     return transformWordPressPost(posts[0]);
   } catch (error) {
     console.error("Error fetching featured post:", error);
+    return null;
+  }
+}
+
+export async function getPageBySlug(slug: string): Promise<PageEntry | null> {
+  try {
+    if (!slug || typeof slug !== "string") {
+      console.error("Invalid page slug provided");
+      return null;
+    }
+
+    const url = `${PAGES_API_BASE_URL}/pages?slug=${encodeURIComponent(slug)}`;
+
+    const response = await fetch(url, {
+      next: { revalidate: 300 },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      console.error(
+        `WordPress Pages API error: ${response.status} ${response.statusText}`
+      );
+      return null;
+    }
+
+    const pages: WordPressPage[] = await response.json();
+
+    if (!Array.isArray(pages) || pages.length === 0) {
+      console.warn(`No page found with slug: ${slug}`);
+      return null;
+    }
+
+    return transformWordPressPage(pages[0]);
+  } catch (error) {
+    console.error("Error fetching page by slug:", error);
     return null;
   }
 }

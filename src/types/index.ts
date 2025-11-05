@@ -15,6 +15,15 @@ export interface Post {
   readTime: string;
 }
 
+export interface PageEntry {
+  id: number;
+  title: string;
+  slug: string;
+  content: string;
+  excerpt?: string;
+  date: string;
+}
+
 export interface WordPressPost {
   id: number;
   title: {
@@ -48,4 +57,19 @@ export interface WordPressPost {
       }>
     >;
   };
+}
+
+export interface WordPressPage {
+  id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+  content: {
+    rendered: string;
+  };
+  excerpt?: {
+    rendered: string;
+  };
+  date: string;
 }
