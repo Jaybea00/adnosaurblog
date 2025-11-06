@@ -1,7 +1,7 @@
 import { generateSitemapStylesheet } from "@/lib/sitemap";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 3600;
+export const revalidate = 86400;
+export const dynamic = "force-static";
 
 export async function GET() {
   const xsl = generateSitemapStylesheet();
