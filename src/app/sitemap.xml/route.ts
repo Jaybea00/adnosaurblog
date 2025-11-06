@@ -1,6 +1,7 @@
 import { generateSitemapIndex } from "@/lib/sitemap";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export async function GET() {
   const xml = await generateSitemapIndex();
