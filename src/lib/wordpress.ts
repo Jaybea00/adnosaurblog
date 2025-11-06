@@ -1,6 +1,6 @@
 import { PageEntry, Post, WordPressPage, WordPressPost } from "@/types";
 
-const API_BASE_URL = "https://go.azfar.in/wp-json/wp/v2";
+const API_BASE_URL = "https://go.adnosaur.com/wp-json/wp/v2";
 const PAGES_API_BASE_URL = "https://go.adnosaur.com/wp-json/wp/v2";
 
 // Helper function to strip HTML tags
@@ -44,6 +44,7 @@ export function transformWordPressPost(wpPost: any): Post {
         name: author?.name || "Anonymous",
         avatar: avatarUrl,
         bio: author?.description ? stripHtml(author.description) : undefined,
+        slug: author?.slug,
       },
       featuredImage:
         featuredMedia?.source_url ||
@@ -82,6 +83,7 @@ export function transformWordPressPage(wpPage: WordPressPage): PageEntry {
     content: wpPage.content?.rendered || "",
     excerpt: wpPage.excerpt?.rendered,
     date: wpPage.date || new Date().toISOString(),
+    modified: wpPage.modified,
   };
 }
 

@@ -9,6 +9,7 @@ export interface Post {
     name: string;
     avatar?: string;
     bio?: string;
+    slug?: string;
   };
   date: string;
   categories: string[];
@@ -22,6 +23,7 @@ export interface PageEntry {
   content: string;
   excerpt?: string;
   date: string;
+  modified?: string;
 }
 
 export interface WordPressPost {
@@ -72,4 +74,5 @@ export interface WordPressPage {
     rendered: string;
   };
   date: string;
+  modified?: string;
 }
