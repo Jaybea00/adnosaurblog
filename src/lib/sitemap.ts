@@ -191,9 +191,9 @@ export async function generateSitemapIndex(): Promise<string> {
   const nowIso = new Date().toISOString();
 
   const entries: SitemapEntry[] = [
-    { loc: buildAbsoluteUrl("/sitemap-pages"), lastmod: nowIso },
-    { loc: buildAbsoluteUrl("/sitemap-posts"), lastmod: nowIso },
-    { loc: buildAbsoluteUrl("/sitemap-authors"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/pages"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/posts"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/authors"), lastmod: nowIso },
   ];
 
   return buildSitemapIndexXml(entries);
