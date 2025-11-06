@@ -60,9 +60,9 @@ export default function Footer() {
               <ul className="space-y-2 font-inter">
                 <li>
                   <Link
-                    href="https://adnosaur.com/contact"
-                     target="_blank"
-  rel="noopener noreferrer"
+                    href="/contact"
+  //                    target="_blank"
+  // rel="noopener noreferrer"
                     className="text-gray-800 hover:text-primary transition-colors text-sm"
                   >
                     Support page
@@ -70,9 +70,9 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://support@adnosaur.com/"
-                     target="_blank"
-  rel="noopener noreferrer"
+                    href="/"
+  //                    target="_blank"
+  // rel="noopener noreferrer"
                     className="text-gray-800 hover:text-primary transition-colors text-sm"
                   >
                     support@adnosaur.com
@@ -167,7 +167,7 @@ export default function Footer() {
                 Terms of Service
               </Link>
               <Link
-                href="https://blog.adnosaur.com/cookie-policy-eu/"
+                href="/cookie-policy"
                  target="_blank"
   rel="noopener noreferrer"
                 className="text-gray-800 hover:text-primary transition-colors underline"

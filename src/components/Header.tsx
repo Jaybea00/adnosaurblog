@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="header-slide-in fixed top-4 sm:top-6 md:top-9 left-0 right-0 z-50 px-4 font-polysans-media ">
   <nav className="w-full max-w-[320px] sm:max-w-[360px] md:max-w-full lg:max-w-4xl mx-auto bg-navbar backdrop-blur-sm border border-gray-700 rounded-full ">
-        <div className="flex justify-between items-center lg:pl-3 lg:pr-3 px-4 lg:px-6 py-2 sm:py-3 lg:py-2">
+        <div className="flex justify-between items-center lg:pl-5 lg:pr-3 px-4 lg:px-6 py-2 sm:py-3 lg:py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img
