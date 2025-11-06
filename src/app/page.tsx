@@ -7,7 +7,11 @@ import VideoOnScroll from "@/components/VideoOnScroll";
 import Image from "next/image";
 
 // Small helper for green/orange round badges with a white check
-const CircleCheck = ({ color = "#0ba100" }: { color?: "#0ba100" | "orange" }) => (
+const CircleCheck = ({
+  color = "#0ba100",
+}: {
+  color?: "#0ba100" | "orange";
+}) => (
   <div
     className={`w-6 h-6 rounded-full mx-auto flex items-center justify-center ${
       color === "orange" ? "bg-orange-400" : "bg-[#0ba100]"
@@ -103,7 +107,7 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-  <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10 ">
+      <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10 ">
         <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6 [@media(min-width:640px)_and_(max-width:767px)]:pt-[2rem]">
           {/* Contained card with rounded corners */}
           <div className="bg-transparent lg:bg-[#1a1a1a] rounded-[2.5rem] p-2 lg:py-[80px] lg:px-[90px] pb-0 lg:pb-90 relative overflow-hidden lg:shadow-none max-[400px]:pt-4 max-[400px]:pb-4 ">
@@ -112,8 +116,9 @@ export default function Home() {
                 Find and list unsaturated{" "}
                 <span className=" text-[#0fb004] lg:text-[#8fff87] ">
                   winning fashion products
-                </span>{" "}<br className="lg:hidden" />
-                 in seconds.
+                </span>{" "}
+                <br className="lg:hidden" />
+                in seconds.
               </h1>
 
               <p className="text-base lg:text-[16px] text-gray-600 lg:text-[#a7a5a7] lg:font-normal mb-8 max-w-4xl mx-auto font-geist">
@@ -154,7 +159,9 @@ export default function Home() {
                     />
                   </svg>
                   <p className="text-gray-900 lg:text-white font-inter">
-                    <span className="font-semibold font-inter">Hand-picked winners:</span>{" "}
+                    <span className="font-semibold font-inter">
+                      Hand-picked winners:
+                    </span>{" "}
                     Get products matched directly to your niche and country.
                   </p>
                 </div>
@@ -171,7 +178,9 @@ export default function Home() {
                     />
                   </svg>
                   <p className="text-gray-900 lg:text-white font-inter">
-                    <span className="font-semibold font-inter">Limited to 500 users:</span>{" "}
+                    <span className="font-semibold font-inter">
+                      Limited to 500 users:
+                    </span>{" "}
                     Keeping products unsaturated and profits high.
                   </p>
                 </div>
@@ -184,7 +193,10 @@ export default function Home() {
                 >
                   Find unsaturated fashion winners now
                 </Link>
-                <Link href="#how-it-works" className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 lg:bg-transparent lg:border-white/30 lg:text-white lg:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto">
+                <Link
+                  href="#how-it-works"
+                  className="bg-white border border-gray-200 text-gray-900 hover:bg-gray-50 lg:bg-transparent lg:border-white/30 lg:text-white lg:hover:bg-white/5 font-medium py-4 px-8 rounded-2xl lg:rounded-2xl transition-colors text-[15px] min-[750px]:text-[18px] lg:text-[15px] w-full lg:w-auto"
+                >
                   See how it works
                 </Link>
               </div>
@@ -220,12 +232,10 @@ export default function Home() {
                       alt="After - Total sales €247,058"
                       className="w-full h-auto rounded-xl shadow-xl"
                     />
-                  
                   </div>
-                  
                 </div>
-                  {/* Animated Notifications Overlay */}
-                    <AnimatedNotifications />
+                {/* Animated Notifications Overlay */}
+                <AnimatedNotifications />
               </div>
             </div>
           </div>
@@ -258,10 +268,12 @@ export default function Home() {
                 alt="After - Total sales €247,058"
                 className="w-[100%] mx-auto h-auto rounded-xl"
               />
-             
             </div>
-             {/* Shopify-style animated notifications overlay */}
-              <AnimatedNotifications side="left" className="scale-75 md:left-auto md:-right-16" />
+            {/* Shopify-style animated notifications overlay */}
+            <AnimatedNotifications
+              side="left"
+              className="scale-75 md:left-auto md:-right-16"
+            />
           </div>
         </div>
       </section>
@@ -276,12 +288,15 @@ export default function Home() {
       />
 
       {/* Product Research Method Section */}
-      <section id="how-it-works" className="py-14 px-3 md:py-25 md:px-4 bg-transparent ">
+      <section
+        id="how-it-works"
+        className="py-14 px-3 md:py-25 md:px-4 bg-transparent "
+      >
         <div className="max-w-3xl md:max-w-4xl lg:max-w-6xl mx-auto text-center">
           <h2 className="text-[25px] leading-[30px] min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-bold text-gray-900 mb-4 leading-10">
             Your product research method
             <br />
-            is losing you{" "}<br className="md:hidden" />
+            is losing you <br className="md:hidden" />
             <span className="text-[#bfbfbd]">time and money.</span>
           </h2>
           <p className="text-[#909293] text-[16px] max-w-[765px] font-normal mx-auto mb-15 font-geist">
@@ -291,19 +306,18 @@ export default function Home() {
             increase your winning product rate to 31%*.
           </p>
 
-              {/* Product Search Cards Section */}
-      <section className="px-2 md:px-4 bg-transparent">
-        <ProductSearchCards />
-      </section>
+          {/* Product Search Cards Section */}
+          <section className="px-2 md:px-4 bg-transparent">
+            <ProductSearchCards />
+          </section>
         </div>
       </section>
 
       {/* Video Section */}
-  <section className="px-4 bg-gray-50 font-polysans">
+      <section className="px-4 bg-gray-50 font-polysans">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl min-[750px]:text-[25px] min-[750px]:leading-[30px] lg:text-[45px] lg:leading-[54px] font-semibold  text-gray-900 mb-4 text-center leading:9 ">
-            Watch how Adnosaur helps you find{" "}
-            <br className="hidden md:block" />
+            Watch how Adnosaur helps you find <br className="hidden md:block" />
             <span className="text-[#949494]">
               unsaturated fashion products
             </span>{" "}
@@ -327,7 +341,7 @@ export default function Home() {
               <Link
                 href="https://trial.adnosaur.com/"
                 target="_blank"
-  rel="noopener noreferrer"
+                rel="noopener noreferrer"
                 className="inline-block border-1 max-sm:w-full border-gray-300 hover:border-gray-500bg-transparent text-gray-700 font-medium py-4 px-8 rounded-2xl transition-colors"
               >
                 Try for free{" "}
@@ -431,7 +445,9 @@ export default function Home() {
                       Tiktok/Pinterest ads
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 bg-[#F6FFF4] md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
                       <CircleCheck />
@@ -448,7 +464,9 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
                       <span className="text-gray-400 text-xs">
@@ -489,10 +507,14 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -508,10 +530,14 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -527,10 +553,14 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -555,7 +585,9 @@ export default function Home() {
                       <CircleCheck color="orange" />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -583,7 +615,9 @@ export default function Home() {
                       <CircleCheck color="orange" />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                   </tr>
                   <tr>
@@ -608,10 +642,14 @@ export default function Home() {
                       <CircleCheck />
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                     <td className="py-2 md:py-3 px-2 md:px-4 text-center border-l border-gray-200 md:w-[220px] md:min-w-[220px]">
-                      <span className="text-gray-300 text-[25px] font-inter">×</span>
+                      <span className="text-gray-300 text-[25px] font-inter">
+                        ×
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -887,7 +925,10 @@ export default function Home() {
           <p className="text-[18px]  md:text-[18px] text-[#2424248c] text-center max-w-[780px] mx-auto mb-8 md:mb-12 px-2 font-geist">
             Product research tools lose their edge when used by everybody.
             Therefore, we will only allow 500 dropshippers to work with us. Lock
-            in your seat now with up to <span className="font-bold inline text-[#2424248c]">80% discount!</span>
+            in your seat now with up to{" "}
+            <span className="font-bold inline text-[#2424248c]">
+              80% discount!
+            </span>
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
@@ -904,8 +945,8 @@ export default function Home() {
               </div>
               <Link
                 href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9CwEsOdJ7C9r&amount=10"
-                 target="_blank"
-  rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full font-inter bg-gray-100 hover:bg-[#8fff87] text-gray-900 font-semibold font-inter py-3 px-6 rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Get started
@@ -1001,7 +1042,9 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">Magic search</span>
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
+                    Magic search
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1124,8 +1167,8 @@ export default function Home() {
               </div>
               <Link
                 href="https://api.adnosaur.com/api/v3/stripe/create-checkout-session?planId=prod_St9EWjEjmIhmeO&amount=30"
-                 target="_blank"
-  rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full bg-primary hover:bg-[#8fff87] text-gray-900 font-semibold py-3 px-6 font-inter rounded-[1rem] transition-colors mb-6 text-center"
               >
                 Get started
@@ -1271,7 +1314,9 @@ export default function Home() {
             {/* Pro Plan */}
             <div className="bg-transparent border border-gray-200 rounded-2xl p-8">
               <div className="flex items-center gap-2 mb-4">
-                <div className="text-lg font-bold font-inter text-gray-900">Pro Plan</div>
+                <div className="text-lg font-bold font-inter text-gray-900">
+                  Pro Plan
+                </div>
                 <div className="bg-gray-100 text-gray-900 text-xs font-semibold font-inter px-3 py-1 rounded-full">
                   Beta
                 </div>
@@ -1347,7 +1392,9 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">200 AI credits</span>
+                  <span className="text-[16px] leading-[24px] text-[#667084] font-normal font-inter">
+                    200 AI credits
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-5 h-5 bg-[#0ba100] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1436,7 +1483,10 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-  <section id="faq" className="py-12 md:py-20 px-4 bg-transparent font-inter">
+      <section
+        id="faq"
+        className="py-12 md:py-20 px-4 bg-transparent font-inter"
+      >
         <div className="max-w-5xl mx-auto">
           <h2 className="text-[1.5rem] md:text-3xl lg:text-[45px] font-bold text-gray-900 mb-8 md:mb-12 text-center px-2 font-polysans-media">
             Frequently asked questions
