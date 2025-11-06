@@ -192,7 +192,7 @@ export async function generateSitemapIndex(): Promise<string> {
 
   const entries: SitemapEntry[] = [
     { loc: buildAbsoluteUrl("/pages"), lastmod: nowIso },
-    { loc: buildAbsoluteUrl("/posts"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/post"), lastmod: nowIso },
     { loc: buildAbsoluteUrl("/authors"), lastmod: nowIso },
   ];
 
