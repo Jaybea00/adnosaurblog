@@ -107,8 +107,8 @@ const InfoBadge = ({
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10 ">
-        <div className="max-w-[1200px] w-full max-[370px]:px-2 px-6 [@media(min-width:640px)_and_(max-width:767px)]:pt-[2rem]">
+      <section className="relative lg:text-white overflow-visible flex items-center justify-center lg:min-h-[90vh] pt-20 min-[400px]:pt-[6rem] sm:pt-20 md:pt-[4rem] lg:pt-12 pb-0 lg:pb-10 [@media(min-width:1400px)_and_(max-width:3500px)]:min-h-[5vh]">
+        <div className="max-w-[1200px]  w-full max-[370px]:px-2 px-6 [@media(min-width:640px)_and_(max-width:767px)]:pt-[2rem] [@media(min-width:1400px)_and_(max-width:2600px)]:pt-[0rem]">
           {/* Contained card with rounded corners */}
           <div className="bg-transparent lg:bg-[#1a1a1a] rounded-[2.5rem] p-2 lg:py-[80px] lg:px-[90px] pb-0 lg:pb-90 relative overflow-hidden lg:shadow-none max-[400px]:pt-4 max-[400px]:pb-4 ">
             <div className="text-center relative z-10">

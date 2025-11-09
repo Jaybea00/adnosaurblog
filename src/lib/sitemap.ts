@@ -1,6 +1,6 @@
 import { getPageBySlug } from "@/lib/wordpress";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://adnosaurblog.vercel.app").replace(/\/$/, "");
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://adnosaur.com").replace(/\/$/, "");
 const WORDPRESS_POSTS_BASE = "https://go.adnosaur.com/wp-json/wp/v2/";
 
 type SitemapEntry = {
