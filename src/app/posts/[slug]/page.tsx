@@ -3,6 +3,10 @@ import Link from "next/link";
 import { decode } from "he";
 import { getPostBySlug } from "@/lib/wordpress";
 import ShareButtons from "@/components/ShareButtons";
+
+// Real-time rendering for individual post pages
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 export default async function PostPage({
   params,
 }: {

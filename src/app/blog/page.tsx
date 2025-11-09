@@ -3,6 +3,11 @@ import FeaturedPost from "@/components/FeaturedPost";
 import { getFeaturedPost } from "@/lib/wordpress";
 import { Suspense } from "react";
 
+// Force this page to be rendered on every request (real-time)
+export const dynamic = "force-dynamic";
+// Disable any automatic revalidation / static cache
+export const revalidate = 0;
+
 export default async function BlogPage() {
   const featuredPost = await getFeaturedPost();
 

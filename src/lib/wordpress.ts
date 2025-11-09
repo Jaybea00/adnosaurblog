@@ -87,16 +87,17 @@ export function transformWordPressPage(wpPage: WordPressPage): PageEntry {
   };
 }
 
-// Fetch all posts
+// Shared fetch options for real-time (no caching). Using cache: 'no-store' ensures fresh data each request.
+const REALTIME_HEADERS = { "Content-Type": "application/json" } as const;
+
+// Fetch all posts (real-time)
 export async function getPosts(perPage: number = 10): Promise<Post[]> {
   try {
     const url = `${API_BASE_URL}/posts?_embed=true&per_page=${perPage}`;
 
     const response = await fetch(url, {
-      next: { revalidate: 60 }, // Revalidate every 60 seconds
-      headers: {
-        "Content-Type": "application/json",
-      },
+      cache: "no-store",
+      headers: REALTIME_HEADERS,
     });
 
     if (!response.ok) {
@@ -128,15 +129,11 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       return null;
     }
 
-    const url = `${API_BASE_URL}/posts?slug=${encodeURIComponent(
-      slug
-    )}&_embed=true`;
+    const url = `${API_BASE_URL}/posts?slug=${encodeURIComponent(slug)}&_embed=true`;
 
     const response = await fetch(url, {
-      next: { revalidate: 60 },
-      headers: {
-        "Content-Type": "application/json",
-      },
+      cache: "no-store",
+      headers: REALTIME_HEADERS,
     });
 
     if (!response.ok) {
@@ -166,10 +163,8 @@ export async function getFeaturedPost(): Promise<Post | null> {
     const url = `${API_BASE_URL}/posts?_embed=true&per_page=1&orderby=date&order=desc`;
 
     const response = await fetch(url, {
-      next: { revalidate: 60 },
-      headers: {
-        "Content-Type": "application/json",
-      },
+      cache: "no-store",
+      headers: REALTIME_HEADERS,
     });
 
     if (!response.ok) {
@@ -202,11 +197,11 @@ export async function getPageBySlug(slug: string): Promise<PageEntry | null> {
 
     const url = `${PAGES_API_BASE_URL}/pages?slug=${encodeURIComponent(slug)}`;
 
+    // Pages can remain lightly cached; switch to no-store if real-time is needed.
     const response = await fetch(url, {
+      // Keeping a small TTL could be optional; for strict real-time replace with cache: 'no-store'.
       next: { revalidate: 300 },
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: REALTIME_HEADERS,
     });
 
     if (!response.ok) {
