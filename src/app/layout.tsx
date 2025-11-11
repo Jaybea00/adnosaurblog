@@ -55,6 +55,12 @@ export default function RootLayout({
       lang="en"
       className={`${polySans.variable} ${geist.variable} ${geistMono.variable} ${inter.variable} ${roboto.variable}`}
     >
+       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+    
+      </head>
       <body>
         <Header />
         <main className="min-h-screen pt-0  md:pt-20">{children}</main>
