@@ -254,7 +254,6 @@ export default function Home() {
               src="/Image 1.png"
               alt="Before - Total sales €1,782"
               className="w-[100%]  rounded-xl"
-              fetchpriority="high"
             />
           </div>
 
