@@ -163,7 +163,7 @@ export async function generateAuthorsSitemap(): Promise<string> {
       return;
     }
 
-    const loc = buildAbsoluteUrl(`/authors.xml/${author.slug}`);
+    const loc = buildAbsoluteUrl(`/authors/${author.slug}`);
     const postLastMod = toIsoDate(
       post.modified_gmt || post.modified || post.date_gmt || post.date
     );
