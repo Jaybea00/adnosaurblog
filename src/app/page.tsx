@@ -250,12 +250,16 @@ export default function Home() {
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-extrabold font-inter px-3 py-1 rounded-full shadow-[1px_4px_0_rgba(0,0,0,1)]">
               Before
             </div>
-            <img
-              src="/Image 1.png"
-              alt="Before - Total sales €1,782"
-              className="w-[100%]  rounded-xl"
-              fetchPriority="high"
-            />
+            <Image
+  src="/Image 1.png"
+  alt="Before - Total sales €1,782"
+  width={600}
+  height={400}
+  className="w-[100%] rounded-xl"
+  priority
+  fetchPriority="high"
+  sizes="(max-width: 768px) 100vw, 600px"
+/>
           </div>
 
           {/* After Card */}
