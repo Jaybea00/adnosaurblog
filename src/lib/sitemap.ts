@@ -145,7 +145,7 @@ export async function generatePostsSitemap(): Promise<string> {
     const lastMod =
       post.modified_gmt || post.modified || post.date_gmt || post.date;
     return {
-      loc: buildAbsoluteUrl(`/posts/${post.slug}`),
+      loc: buildAbsoluteUrl(`/posts.xml/${post.slug}`),
       lastmod: toIsoDate(lastMod),
     };
   });
@@ -163,7 +163,7 @@ export async function generateAuthorsSitemap(): Promise<string> {
       return;
     }
 
-    const loc = buildAbsoluteUrl(`/authors/${author.slug}`);
+    const loc = buildAbsoluteUrl(`/authors.xml/${author.slug}`);
     const postLastMod = toIsoDate(
       post.modified_gmt || post.modified || post.date_gmt || post.date
     );
@@ -191,9 +191,9 @@ export async function generateSitemapIndex(): Promise<string> {
   const nowIso = new Date().toISOString();
 
   const entries: SitemapEntry[] = [
-    { loc: buildAbsoluteUrl("/pages"), lastmod: nowIso },
-    { loc: buildAbsoluteUrl("/post"), lastmod: nowIso },
-    { loc: buildAbsoluteUrl("/authors"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/pages.xml"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/post.xml"), lastmod: nowIso },
+    { loc: buildAbsoluteUrl("/authors.xml"), lastmod: nowIso },
   ];
 
   return buildSitemapIndexXml(entries);
