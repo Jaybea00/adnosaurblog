@@ -268,11 +268,16 @@ export default function Home() {
               After
             </div>
             <div className="relative">
-              <img
-                src="/Image 2.png"
-                alt="After - Total sales €247,058"
-                className="w-[100%] mx-auto h-auto rounded-xl"
-              />
+             <Image
+    src="/Image 2.jpeg"
+    alt="After - Total sales €247,058"
+    width={600}
+    height={400}
+    className="w-[100%] mx-auto h-auto rounded-xl"
+    priority
+    fetchPriority="high"
+    sizes="(max-width: 768px) 100vw, 600px"
+  />
             </div>
             {/* Shopify-style animated notifications overlay */}
             <AnimatedNotifications
