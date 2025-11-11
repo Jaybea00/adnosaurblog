@@ -145,7 +145,7 @@ export async function generatePostsSitemap(): Promise<string> {
     const lastMod =
       post.modified_gmt || post.modified || post.date_gmt || post.date;
     return {
-      loc: buildAbsoluteUrl(`/posts.xml/${post.slug}`),
+      loc: buildAbsoluteUrl(`/posts/${post.slug}`),
       lastmod: toIsoDate(lastMod),
     };
   });
