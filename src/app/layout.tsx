@@ -1,9 +1,41 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { Geist, Geist_Mono, Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingNotification from "@/components/FloatingNotification";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+
+const polySans = localFont({
+  src: "../../public/PolySans-Median.ttf",
+  variable: "--font-polysans",
+  display: "swap",
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Fashion dropshipping research - Find your next fashion winner today",
@@ -19,20 +51,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          href="/PolySans-Median.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap"
-        />
-      </head>
+    <html
+      lang="en"
+      className={`${polySans.variable} ${geist.variable} ${geistMono.variable} ${inter.variable} ${roboto.variable}`}
+    >
       <body>
         <Header />
         <main className="min-h-screen pt-0  md:pt-20">{children}</main>
