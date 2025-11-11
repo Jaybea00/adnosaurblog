@@ -228,7 +228,7 @@ export default function Home() {
                   </div>
                   <div className="relative">
                     <img
-                      src="/Image 2.png"
+                      src="/Image 2.jpeg"
                       alt="After - Total sales €247,058"
                       className="w-full h-auto rounded-xl shadow-xl"
                     />
